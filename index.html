@@ -3,92 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Guru Institute</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Skill Guru - Professional Astrology & Occult Learning</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: #0f0c1b; color: #ffffff; text-align: center; padding: 15px; }
+        :root {
+            --primary-color: #ffd700;
+            --accent-red: #ff3333;
+            --bg-dark: #0f0c1b;
+            --card-bg: #1a162b;
+            --text-light: #ffffff;
+            --text-gray: #b3b3b3;
+        }
 
-        .container { max-width: 600px; margin: 0 auto; background: #1a162b; border-radius: 15px; padding: 20px; border: 1px solid #ffd700; }
-        
-        .banner-img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-        .title { color: #ffd700; font-size: 1.8rem; margin-bottom: 5px; }
-        .subtitle { font-size: 0.95rem; color: #ddd; margin-bottom: 15px; }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
 
-        .founders { background: rgba(255,0,0,0.1); border: 1px solid #ff3333; border-radius: 10px; padding: 10px; margin-bottom: 15px; }
-        .founder-name { color: #ff3333; font-weight: 700; font-size: 1.1rem; }
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-        .social-btns { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
-        .btn-social { padding: 8px 15px; border-radius: 20px; text-decoration: none; color: #fff; font-size: 0.85rem; font-weight: 600; }
-        .yt { background: #ff0000; }
-        .insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366); }
-        .fb { background: #1877f2; }
+        /* Banner Image */
+        .banner-container {
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+            margin-bottom: 25px;
+            border: 2px solid var(--primary-color);
+        }
 
-        /* Offer Popup Box Styling */
-        .offer-card { background: #231c38; border: 2px solid #ff3333; border-radius: 15px; padding: 20px; margin: 20px 0; text-align: center; box-shadow: 0 0 15px rgba(255, 51, 51, 0.3); }
-        .offer-header { background: #b30000; color: white; padding: 8px; border-radius: 8px; font-weight: 700; font-size: 1.1rem; margin-bottom: 10px; }
-        .discount-title { color: #ffd700; font-size: 1.6rem; font-weight: 800; margin: 10px 0; }
+        .banner-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-        .form-group { margin-bottom: 12px; text-align: left; }
-        .form-group label { font-size: 0.85rem; color: #ccc; margin-bottom: 4px; display: block; }
-        .form-control { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #444; background: #0f0c1b; color: #fff; font-size: 0.95rem; }
+        /* Header / Founders Section */
+        .header-section {
+            text-align: center;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
 
-        .btn-action-group { display: flex; gap: 10px; margin-top: 15px; }
-        .btn-claim { flex: 2; background: linear-gradient(45deg, #ff3333, #ff6600); color: white; border: none; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; cursor: pointer; }
-        .btn-call { flex: 1; background: #ffffff; color: #000; text-decoration: none; padding: 12px; border-radius: 8px; font-weight: 700; font-size: 0.95rem; display: flex; align-items: center; justify-content: center; gap: 5px; }
+        .header-section h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
 
-        .footer { margin-top: 20px; font-size: 0.85rem; color: #aaa; border-top: 1px solid #333; padding-top: 15px; }
-        .footer a { color: #ffd700; text-decoration: none; }
+        .founders-info {
+            margin-top: 15px;
+        }
+
+        .founder-text {
+            color: var(--accent-red);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 5px 0;
+            text-shadow: 0 0 5px rgba(255, 51, 51, 0.3);
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-youtube { background-color: #ff0000; }
+        .btn-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .btn-facebook { background-color: #1877f2; }
+
+        /* Stats / Achievement Section */
+        .stats-card {
+            background: linear-gradient(135deg, #2a1b40, #140d21);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .stats-card h2 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+
+        /* Offer Banner */
+        .offer-box {
+            background: linear-gradient(45deg, #b30000, #ff3333);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.4);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .offer-box h3 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .offer-badge {
+            background-color: var(--primary-color);
+            color: #000;
+            font-size: 1.8rem;
+            font-weight: 800;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        /* Courses Form Section */
+        .form-section {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background-color: #0f0c1b;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        /* CTA Buttons */
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .btn-submit {
+            flex: 2;
+            background: var(--primary-color);
+            color: #000;
+            border: none;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-call {
+            flex: 1;
+            background: #ffffff;
+            color: #000;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* Footer Section */
+        .footer {
+            background: #080610;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border-top: 2px solid var(--primary-color);
+        }
+
+        .footer p {
+            margin: 8px 0;
+            font-size: 1.05rem;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <!-- Banner Image -->
-        <img src="banner.jpg" alt="Skill Guru" class="banner-img">
-
-        <h1 class="title">🔮 Skill Guru Institute 🔮</h1>
-        <p class="subtitle">🌟 Learn Professional Astrology & Occult Sciences 🌟</p>
-
-        <!-- Founders Info -->
-        <div class="founders">
-            <p class="founder-name">🚩 Founder: Harsh Pandey</p>
-            <p class="founder-name">🚩 Co-Founder: Rohit Pandey</p>
+        <div class="banner-container">
+            <img src="banner.jpg" alt="Skill Guru Banner" onerror="this.src='https://via.placeholder.com/800x350/1a162b/ffd700?text=Skill+Guru+-+Vedic+Astrology+%26+Hand+Reading'">
         </div>
 
-        <!-- Social Links -->
-        <div class="social-btns">
-            <a href="https://www.youtube.com/@skillguru-d1d" target="_blank" class="btn-social yt"><i class="fab fa-youtube"></i> YouTube</a>
-            <a href="https://www.instagram.com/skillguru_official?stkn=a2UzajdkZ2hneHJr" target="_blank" class="btn-social insta"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="https://www.facebook.com/share/1HXoF9uyxN/" target="_blank" class="btn-social fb"><i class="fab fa-facebook"></i> Facebook</a>
+        <!-- Header / Founders Section -->
+        <div class="header-section">
+            <h1>🔮 Skill Guru Institute 🔮</h1>
+            <p>🌟 Learn Professional Astrology & Occult Sciences 🌟</p>
+            
+            <div class="founders-info">
+                <p class="founder-text">🚩 Founder: Harsh Pandey</p>
+                <p class="founder-text">🚩 Co-Founder: Rohit Pandey</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="https://www.youtube.com/@skillguru-d1d" target="_blank" class="social-btn btn-youtube">
+                    <i class="fab fa-youtube"></i> ▶️ YouTube
+                </a>
+                <a href="https://www.instagram.com/skillguru_official?stkn=a2UzajdkZ2hneHJr" target="_blank" class="social-btn btn-instagram">
+                    <i class="fab fa-instagram"></i> 📸 Instagram
+                </a>
+                <a href="https://www.facebook.com/share/1HXoF9uyxN/" target="_blank" class="social-btn btn-facebook">
+                    <i class="fab fa-facebook"></i> 📘 Facebook
+                </a>
+            </div>
         </div>
 
-        <p style="color:#ffd700; font-size:0.9rem; margin-bottom:10px;">🏆 Abhi tak 2000+ Astrologers ko course training ki suvidha pradan kar di hai!</p>
+        <!-- Achievements Stats -->
+        <div class="stats-card">
+            <h2>🏆 Professional Milestone 🏆</h2>
+            <p>✨ Abhi tak humne <strong>2000+ Astrologers</strong> ko professional level training aur course find ki suvidha pradan kar di hai! 🎓📜</p>
+        </div>
 
-        <!-- Ganesh Chaturthi Special Form Modal Card -->
-        <div class="offer-card">
-            <div class="offer-header">🚩 GANESH CHATURTHI SPECIAL 🚩</div>
-            <div class="discount-title">FLAT ₹5100 OFF 🎁</div>
-            <p style="font-size:0.85rem; color:#ddd; margin-bottom:15px;">Fill out this quick form to claim your auspicious discount & get syllabus PDF! 👇</p>
+        <!-- Ganesh Chaturthi Special Offer -->
+        <div class="offer-box">
+            <h3>🚩 GANESH CHATURTHI SPECIAL 🚩</h3>
+            <div class="offer-badge">FLAT ₹5100 OFF 🎁</div>
+            <p>✨ Bappa's Blessings on All Astrology & Occult Courses ✨</p>
+        </div>
 
-            <form action="https://formspree.io/f/skillguru112@gmail.com" method="POST">
+        <!-- Course Selection Form -->
+        <div class="form-section">
+            <p style="text-align: center; color: var(--primary-color); margin-bottom: 20px; font-weight: 600;">Fill out this quick form to claim your auspicious discount & get syllabus PDF! 👇</p>
+            <form id="astrologyForm">
                 <div class="form-group">
                     <label>👤 Your Name</label>
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    <input type="text" id="userName" class="form-control" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
                     <label>📧 Email Address</label>
-                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                    <input type="email" id="userEmail" class="form-control" placeholder="Email Address" required>
                 </div>
                 <div class="form-group">
                     <label>📱 WhatsApp Number</label>
-                    <input type="tel" name="phone" class="form-control" placeholder="+91 WhatsApp Number" required>
+                    <input type="tel" id="userPhone" class="form-control" placeholder="+91 WhatsApp Number" required>
                 </div>
                 <div class="form-group">
                     <label>🎓 Choose Your Course</label>
-                    <select name="course" class="form-control" required>
+                    <select id="userCourse" class="form-control" required>
                         <option value="">Choose your Course</option>
                         <option value="Astrology Course">⭐ Astrology Course</option>
                         <option value="Vastu Course">🏡 Vastu Course</option>
@@ -101,19 +328,47 @@
                     </select>
                 </div>
 
-                <div class="btn-action-group">
-                    <button type="submit" class="btn-claim">🔥 CLAIM ₹5100 OFF NOW</button>
-                    <a href="tel:7704800153" class="btn-call"><i class="fas fa-phone-alt"></i> Call Us</a>
+                <div class="cta-group">
+                    <button type="submit" class="btn-submit">🔥 CLAIM ₹5100 OFF NOW 🔥</button>
+                    <a href="tel:7704800153" class="btn-call">📞 Call Us</a>
                 </div>
             </form>
         </div>
 
-        <!-- Footer -->
+        <!-- Footer Contact Info -->
         <div class="footer">
-            <p>✉️ Email: <a href="mailto:skillguru112@gmail.com">skillguru112@gmail.com</a></p>
-            <p>📞 Phone: <a href="tel:7704800153">+91 7704800153</a></p>
+            <p>✉️ <strong>Email:</strong> <a href="mailto:skillguru112@gmail.com">skillguru112@gmail.com</a></p>
+            <p>📞 <strong>Phone:</strong> <a href="tel:7704800153">+91 7704800153</a></p>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-gray);">© 2026 Skill Guru Institute. All Rights Reserved. 🌟</p>
         </div>
     </div>
 
+    <!-- WhatsApp Integration Script -->
+    <script>
+        document.getElementById("astrologyForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Form Values Collect Karein
+            var name = document.getElementById("userName").value;
+            var email = document.getElementById("userEmail").value;
+            var phone = document.getElementById("userPhone").value;
+            var course = document.getElementById("userCourse").value;
+
+            // Target WhatsApp Number
+            var whatsappNumber = "917704800153";
+
+            // Structured Message Format
+            var message = "🚩 *New Course Enquiry - Skill Guru* 🚩%0A%0A" +
+                          "👤 *Name:* " + encodeURIComponent(name) + "%0A" +
+                          "📧 *Email:* " + encodeURIComponent(email) + "%0A" +
+                          "📱 *WhatsApp:* " + encodeURIComponent(phone) + "%0A" +
+                          "🎓 *Selected Course:* " + encodeURIComponent(course) + "%0A%0A" +
+                          "🎁 *Claiming Offer:* FLAT ₹5100 OFF";
+
+            // Redirect to WhatsApp
+            var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + message;
+            window.open(whatsappURL, "_blank");
+        });
+    </script>
 </body>
 </html>
