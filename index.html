@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Guru - Professional Astrology & Occult Learning</title>
+    <title>Skill Guru Institute | Astrology & Occult Courses</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Cinzel:wght@700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #ffd700;
+            --primary-yellow: #ffd700;
             --accent-red: #ff3333;
-            --bg-dark: #0f0c1b;
-            --card-bg: #1a162b;
+            --bright-blue: #00d2ff;
+            --border-blue: #0088ff;
+            --bg-dark: #0a0e1a;
+            --card-bg: #111827;
+            --input-bg: #1f293d;
             --text-light: #ffffff;
             --text-gray: #b3b3b3;
         }
@@ -29,14 +32,18 @@
             background-color: var(--bg-dark);
             color: var(--text-light);
             line-height: 1.6;
+            padding: 15px;
             padding-bottom: 40px;
         }
 
-        /* Container */
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 20px;
+            border: 3px solid var(--border-blue);
+            border-radius: 20px;
+            padding: 18px;
+            background: rgba(17, 24, 39, 0.4);
+            box-shadow: 0 0 20px rgba(0, 136, 255, 0.35), inset 0 0 15px rgba(0, 136, 255, 0.15);
         }
 
         /* Banner Image */
@@ -44,9 +51,9 @@
             width: 100%;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
-            margin-bottom: 25px;
-            border: 2px solid var(--primary-color);
+            box-shadow: 0 8px 25px rgba(0, 210, 255, 0.25);
+            margin-bottom: 20px;
+            border: 2px solid var(--bright-blue);
         }
 
         .banner-container img {
@@ -55,200 +62,324 @@
             display: block;
         }
 
-        /* Header / Founders Section */
+        /* Header Section */
         .header-section {
             text-align: center;
             background: var(--card-bg);
-            padding: 25px;
+            padding: 24px 20px;
             border-radius: 15px;
-            margin-bottom: 25px;
-            border: 1px solid rgba(255, 215, 0, 0.1);
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 210, 255, 0.3);
         }
 
-        .header-section h1 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-
-        .founders-info {
-            margin-top: 15px;
-        }
-
-        .founder-text {
-            color: var(--accent-red);
+        .astro-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 210, 255, 0.12);
+            color: var(--bright-blue);
+            border: 1px solid rgba(0, 210, 255, 0.4);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
             font-weight: 700;
-            font-size: 1.2rem;
-            margin: 5px 0;
-            text-shadow: 0 0 5px rgba(255, 51, 51, 0.3);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
         }
 
-        /* Social Links */
+        .brand-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.1rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #FFF5C0 0%, #FFD700 50%, #FFA500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            text-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .sub-tagline {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .founders-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 18px 0;
+        }
+
+        .founder-badge {
+            background: linear-gradient(135deg, rgba(255, 51, 51, 0.12), rgba(17, 24, 39, 0.9));
+            border: 1.5px solid #ff3333;
+            border-left: 4px solid #ff3333;
+            border-radius: 10px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 12px rgba(255, 51, 51, 0.15);
+        }
+
+        .founder-title {
+            color: #ff4d4d;
+            font-weight: 800;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+        }
+
+        .founder-name {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .social-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px 20px;
-            border-radius: 25px;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 20px;
             text-decoration: none;
             color: #fff;
+            font-size: 0.9rem;
             font-weight: 600;
-            transition: transform 0.3s ease;
         }
 
-        .social-btn:hover {
-            transform: translateY(-3px);
-        }
+        .btn-yt { background-color: #ff0000; }
+        .btn-insta { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .btn-fb { background-color: #1877f2; }
 
-        .btn-youtube { background-color: #ff0000; }
-        .btn-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-        .btn-facebook { background-color: #1877f2; }
-
-        /* Stats / Achievement Section */
+        /* Stats Card */
         .stats-card {
-            background: linear-gradient(135deg, #2a1b40, #140d21);
-            padding: 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            border: 2px solid var(--bright-blue);
             border-radius: 15px;
+            padding: 20px;
             text-align: center;
-            margin-bottom: 25px;
-            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
+            margin-bottom: 20px;
         }
 
-        .stats-card h2 {
-            font-size: 1.3rem;
-            color: var(--primary-color);
+        .stats-tag {
+            color: var(--primary-yellow);
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
         }
 
-        /* Offer Banner */
+        .stats-text {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+
+        /* Offer Box */
         .offer-box {
-            background: linear-gradient(45deg, #b30000, #ff3333);
+            background: linear-gradient(135deg, #7c2d12 0%, #b91c1c 50%, #dc2626 100%);
             border-radius: 15px;
             padding: 20px;
             text-align: center;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.4);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); }
-            100% { transform: scale(1); }
+            margin-bottom: 20px;
+            border: 2px solid var(--primary-yellow);
+            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.35);
         }
 
         .offer-box h3 {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            color: #ffffff;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .offer-badge {
-            background-color: var(--primary-color);
-            color: #000;
-            font-size: 1.8rem;
-            font-weight: 800;
-            padding: 10px 20px;
+            background-color: var(--primary-yellow);
+            color: #000000;
+            font-size: 1.6rem;
+            font-weight: 900;
+            padding: 8px 20px;
             border-radius: 10px;
             display: inline-block;
             margin: 10px 0;
         }
 
-        /* Courses Form Section */
-        .form-section {
+        .offer-subtext {
+            font-size: 0.9rem;
+            color: #fef08a;
+            font-weight: 600;
+        }
+
+        /* Form Styling */
+        .form-card {
             background: var(--card-bg);
-            padding: 25px;
+            padding: 22px;
             border-radius: 15px;
-            margin-bottom: 25px;
-            border: 1px solid rgba(255, 215, 0, 0.3);
+            border: 1px solid rgba(0, 210, 255, 0.25);
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .form-group label {
-            display: block;
-            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
             font-weight: 600;
+            margin-bottom: 8px;
+            color: #ffffff;
         }
 
         .form-control {
             width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #444;
-            background-color: #0f0c1b;
-            color: #fff;
+            padding: 14px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            background-color: var(--input-bg);
+            color: #ffffff;
             font-size: 1rem;
-        }
-
-        .form-control:focus {
-            border-color: var(--primary-color);
             outline: none;
         }
 
-        /* CTA Buttons */
-        .cta-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
+        .form-control:focus {
+            border-color: var(--bright-blue);
         }
 
+        /* Submit Button */
         .btn-submit {
-            flex: 2;
-            background: var(--primary-color);
-            color: #000;
+            width: 100%;
+            background: linear-gradient(180deg, #ffe033 0%, #ffcc00 100%);
+            color: #cc0000;
             border: none;
-            padding: 15px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 8px;
+            padding: 16px;
+            font-size: 1.6rem;
+            font-weight: 900;
+            border-radius: 12px;
             cursor: pointer;
-            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
         }
 
+        /* Direct Call Button */
         .btn-call {
-            flex: 1;
-            background: #ffffff;
-            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+            color: #ffffff;
             text-decoration: none;
             padding: 15px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 8px;
+            font-size: 1.3rem;
+            font-weight: 800;
+            border-radius: 12px;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.35);
+        }
+
+        /* Gallery */
+        .gallery-section {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-card {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid rgba(0, 210, 255, 0.4);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-caption {
+            background: rgba(17, 24, 39, 0.85);
+            color: var(--primary-yellow);
             text-align: center;
+            padding: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .blue-heading {
+            text-align: center;
+            color: var(--bright-blue);
+            font-size: 1.6rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 20px 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .footer-item {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-        }
-
-        /* Footer Section */
-        .footer {
-            background: #080610;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            border-top: 2px solid var(--primary-color);
-        }
-
-        .footer p {
             margin: 8px 0;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
         }
 
-        .footer a {
-            color: var(--primary-color);
+        .footer-item a {
+            color: var(--primary-yellow);
             text-decoration: none;
+            font-weight: 600;
+        }
+
+        .copyright {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: var(--text-gray);
         }
     </style>
 </head>
@@ -257,64 +388,88 @@
     <div class="container">
         <!-- Banner Image -->
         <div class="banner-container">
-            <img src="banner.jpg" alt="Skill Guru Banner" onerror="this.src='https://via.placeholder.com/800x350/1a162b/ffd700?text=Skill+Guru+-+Vedic+Astrology+%26+Hand+Reading'">
+            <img src="banner.jpg" alt="Live Interactive Classes" onerror="this.src='https://via.placeholder.com/800x350/111827/ffd700?text=Skill+Guru+Institute';">
         </div>
 
         <!-- Header / Founders Section -->
         <div class="header-section">
-            <h1>🔮 Skill Guru Institute 🔮</h1>
-            <p>🌟 Learn Professional Astrology & Occult Sciences 🌟</p>
+            <div class="astro-tag">
+                <span>🔮</span> Premium Astrology & Occult Academy <span>✨</span>
+            </div>
+
+            <h1 class="brand-title">SKILL GURU INSTITUTE</h1>
+            <p class="sub-tagline">Centre for Vedic & Occult Sciences</p>
             
-            <div class="founders-info">
-                <p class="founder-text">🚩 Founder: Harsh Pandey</p>
-                <p class="founder-text">🚩 Co-Founder: Rohit Pandey</p>
+            <div class="founders-container">
+                <div class="founder-badge">
+                    <span class="founder-title">👑 Founder:</span>
+                    <span class="founder-name">Harsh Pandey</span>
+                </div>
+                <div class="founder-badge">
+                    <span class="founder-title">💎 Co-Founder:</span>
+                    <span class="founder-name">Rohit Pandey</span>
+                </div>
             </div>
 
-            <!-- Social Media Links -->
             <div class="social-links">
-                <a href="https://www.youtube.com/@skillguru-d1d" target="_blank" class="social-btn btn-youtube">
-                    <i class="fab fa-youtube"></i> ▶️ YouTube
+                <a href="https://www.youtube.com/@skillguru-d1d" target="_blank" class="social-btn btn-yt">
+                    <i class="fab fa-youtube"></i> YouTube
                 </a>
-                <a href="https://www.instagram.com/skillguru_official?stkn=a2UzajdkZ2hneHJr" target="_blank" class="social-btn btn-instagram">
-                    <i class="fab fa-instagram"></i> 📸 Instagram
+                <a href="https://www.instagram.com/skillguru_official?stkn=a2UzajdkZ2hneHJr" target="_blank" class="social-btn btn-insta">
+                    <i class="fab fa-instagram"></i> Instagram
                 </a>
-                <a href="https://www.facebook.com/share/1HXoF9uyxN/" target="_blank" class="social-btn btn-facebook">
-                    <i class="fab fa-facebook"></i> 📘 Facebook
+                <a href="https://www.facebook.com/share/1HXoF9uyxN/" target="_blank" class="social-btn btn-fb">
+                    <i class="fab fa-facebook"></i> Facebook
                 </a>
             </div>
         </div>
 
-        <!-- Achievements Stats -->
+        <!-- Stats Card -->
         <div class="stats-card">
-            <h2>🏆 Professional Milestone 🏆</h2>
-            <p>✨ Abhi tak humne <strong>2000+ Astrologers</strong> ko professional level training aur course find ki suvidha pradan kar di hai! 🎓📜</p>
+            <p class="stats-tag">🎓 Empowering Global Talent 🔮</p>
+            <h3 class="stats-text">
+                Successfully Empowered <span style="color: #ff3333; font-weight: 800; text-decoration: underline;">2,000+ Professional Astrologers</span> with Expert Training & Guidance 📜✨
+            </h3>
         </div>
 
-        <!-- Ganesh Chaturthi Special Offer -->
+        <!-- Offer Box -->
         <div class="offer-box">
-            <h3>🚩 GANESH CHATURTHI SPECIAL 🚩</h3>
-            <div class="offer-badge">FLAT ₹5100 OFF 🎁</div>
-            <p>✨ Bappa's Blessings on All Astrology & Occult Courses ✨</p>
+            <h3>🌟 SPECIAL LIMITED TIME OFFER 🌟</h3>
+            <div class="offer-badge">FLAT 50% OFF ON ALL FEES</div>
+            <p class="offer-subtext">Apply now for professional Astrology & Occult courses at half price!</p>
         </div>
 
-        <!-- Course Selection Form -->
-        <div class="form-section">
-            <p style="text-align: center; color: var(--primary-color); margin-bottom: 20px; font-weight: 600;">Fill out this quick form to claim your auspicious discount & get syllabus PDF! 👇</p>
-            <form id="astrologyForm">
-                <div class="form-group">
-                    <label>👤 Your Name</label>
-                    <input type="text" id="userName" class="form-control" placeholder="Your Name" required>
+        <!-- Form Section -->
+        <div class="form-card">
+            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> First Name</label>
+                        <input type="text" id="firstName" class="form-control" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-user"></i> Last Name</label>
+                        <input type="text" id="lastName" class="form-control" placeholder="Last Name" required>
+                    </div>
                 </div>
+
                 <div class="form-group">
-                    <label>📧 Email Address</label>
-                    <input type="email" id="userEmail" class="form-control" placeholder="Email Address" required>
-                </div>
-                <div class="form-group">
-                    <label>📱 WhatsApp Number</label>
+                    <label><i class="fab fa-whatsapp" style="color: #25d366;"></i> WhatsApp Number</label>
                     <input type="tel" id="userPhone" class="form-control" placeholder="+91 WhatsApp Number" required>
                 </div>
+
                 <div class="form-group">
-                    <label>🎓 Choose Your Course</label>
+                    <label><i class="fas fa-envelope" style="color: #ea4335;"></i> Email Address</label>
+                    <input type="email" id="userEmail" class="form-control" placeholder="your.email@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-map-marker-alt" style="color: #ff4d4d;"></i> Location / City</label>
+                    <input type="text" id="userLocation" class="form-control" placeholder="Your City / Location" required>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-graduation-cap"></i> Choose Your Course</label>
                     <select id="userCourse" class="form-control" required>
                         <option value="">Choose your Course</option>
                         <option value="Astrology Course">⭐ Astrology Course</option>
@@ -328,47 +483,71 @@
                     </select>
                 </div>
 
-                <div class="cta-group">
-                    <button type="submit" class="btn-submit">🔥 CLAIM ₹5100 OFF NOW 🔥</button>
-                    <a href="tel:7704800153" class="btn-call">📞 Call Us</a>
-                </div>
+                <!-- WhatsApp Submit Button -->
+                <button type="submit" class="btn-submit">
+                    SUBMIT 👆
+                </button>
+
+                <!-- Phone Call Button -->
+                <a href="tel:7704800153" class="btn-call">
+                    ➡️ 📱 CALL US
+                </a>
             </form>
+
+            <div class="gallery-section">
+                <div class="gallery-card">
+                    <img src="gallery1.jpg" alt="Vedic Astrology & Planetary Chart" onerror="this.src='https://via.placeholder.com/600x350/1f293d/ffffff?text=Vedic+Astrology+%26+Planetary+Chart';">
+                    <div class="gallery-caption">✨ Live Interactive Astrology & Kundli Sessions 📜</div>
+                </div>
+                <div class="gallery-card">
+                    <img src="gallery2.jpg" alt="Golden Horoscope Chart Reading" onerror="this.src='https://via.placeholder.com/600x350/1f293d/ffd700?text=Golden+Horoscope+Chart';">
+                    <div class="gallery-caption">🔮 Master Horoscope, Palmistry & Vastu Shastra 🌌</div>
+                </div>
+            </div>
+
+            <h2 class="blue-heading">India's best astrology class</h2>
         </div>
 
-        <!-- Footer Contact Info -->
+        <!-- Footer -->
         <div class="footer">
-            <p>✉️ <strong>Email:</strong> <a href="mailto:skillguru112@gmail.com">skillguru112@gmail.com</a></p>
-            <p>📞 <strong>Phone:</strong> <a href="tel:7704800153">+91 7704800153</a></p>
-            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-gray);">© 2026 Skill Guru Institute. All Rights Reserved. 🌟</p>
+            <div class="footer-item">
+                <i class="fas fa-envelope"></i>
+                <span>Email: <a href="mailto:skillgurueducation112@gmail.com">skillgurueducation112@gmail.com</a></span>
+            </div>
+            <div class="footer-item">
+                <i class="fas fa-phone-alt"></i>
+                <span>Phone: <a href="tel:7704800153">+91 7704800153</a></span>
+            </div>
+            <div class="copyright">
+                © 2026 Skill Guru Institute. All Rights Reserved.
+            </div>
         </div>
     </div>
 
-    <!-- WhatsApp Integration Script -->
     <script>
-        document.getElementById("astrologyForm").addEventListener("submit", function(event) {
+        function sendToWhatsApp(event) {
             event.preventDefault();
 
-            // Form Values Collect Karein
-            var name = document.getElementById("userName").value;
-            var email = document.getElementById("userEmail").value;
-            var phone = document.getElementById("userPhone").value;
-            var course = document.getElementById("userCourse").value;
+            var firstName = document.getElementById('firstName').value.trim();
+            var lastName = document.getElementById('lastName').value.trim();
+            var phone = document.getElementById('userPhone').value.trim();
+            var email = document.getElementById('userEmail').value.trim();
+            var location = document.getElementById('userLocation').value.trim();
+            var course = document.getElementById('userCourse').value;
 
-            // Target WhatsApp Number
-            var whatsappNumber = "917704800153";
+            var targetNumber = "917704800153";
 
-            // Structured Message Format
-            var message = "🚩 *New Course Enquiry - Skill Guru* 🚩%0A%0A" +
-                          "👤 *Name:* " + encodeURIComponent(name) + "%0A" +
-                          "📧 *Email:* " + encodeURIComponent(email) + "%0A" +
-                          "📱 *WhatsApp:* " + encodeURIComponent(phone) + "%0A" +
-                          "🎓 *Selected Course:* " + encodeURIComponent(course) + "%0A%0A" +
-                          "🎁 *Claiming Offer:* FLAT ₹5100 OFF";
+            var message = "Hello Skill Guru Team! 👋%0A%0A" +
+                "I want to join a course with 50% OFF discount.%0A%0A" +
+                "👤 *Name:* " + encodeURIComponent(firstName + " " + lastName) + "%0A" +
+                "📱 *WhatsApp No:* " + encodeURIComponent(phone) + "%0A" +
+                "📧 *Email:* " + encodeURIComponent(email) + "%0A" +
+                "📍 *Location:* " + encodeURIComponent(location) + "%0A" +
+                "🎓 *Selected Course:* " + encodeURIComponent(course);
 
-            // Redirect to WhatsApp
-            var whatsappURL = "https://wa.me/" + whatsappNumber + "?text=" + message;
-            window.open(whatsappURL, "_blank");
-        });
+            var whatsappURL = "https://wa.me/" + targetNumber + "?text=" + message;
+            window.open(whatsappURL, '_blank');
+        }
     </script>
 </body>
 </html>
