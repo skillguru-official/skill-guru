@@ -355,39 +355,60 @@
             box-shadow: 0 4px 15px rgba(34, 197, 94, 0.35);
         }
 
-        /* Contact Details Footer inside Form */
+        /* Highlighted Interactive Contact Details Box with Motion & Glow */
+        @keyframes contactGlow {
+            0% { border-color: #00d2ff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.2); }
+            50% { border-color: #ffd700; box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
+            100% { border-color: #00d2ff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.2); }
+        }
+
         .contact-info-box {
             text-align: center;
-            background: rgba(0, 210, 255, 0.08);
-            border: 1px dashed var(--bright-blue);
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
+            background: linear-gradient(135deg, rgba(0, 210, 255, 0.12), rgba(17, 24, 39, 0.9));
+            border: 2px solid var(--bright-blue);
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 20px;
             margin-bottom: 10px;
+            animation: contactGlow 3s infinite ease-in-out;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info-box:hover {
+            transform: translateY(-3px);
         }
 
         .contact-info-box p {
             color: #ffffff;
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin: 6px 0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin: 8px 0;
+            letter-spacing: 0.5px;
         }
 
         .contact-info-box a {
             color: var(--primary-yellow);
             text-decoration: none;
+            font-weight: 800;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+            transition: color 0.2s ease;
+        }
+
+        .contact-info-box a:hover {
+            color: #00d2ff;
+            text-decoration: underline;
         }
 
         .footer-tagline {
             text-align: center;
             color: var(--primary-yellow);
-            font-size: 1.05rem;
-            font-weight: 800;
+            font-size: 1.15rem;
+            font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             margin-top: 25px;
             margin-bottom: 15px;
-            text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
         }
 
         /* Gallery */
@@ -547,23 +568,4 @@
                         <option value="Vastu Course">🏡 Vastu Course</option>
                         <option value="Numerology Course">🔢 Numerology Course</option>
                         <option value="Palmistry Course">✋ Palmistry Course</option>
-                        <option value="Card Reading Course">🃏 Card Reading Course</option>
-                        <option value="Graphology Course">✍️ Graphology Course</option>
-                        <option value="Reiki Course">👐 Reiki Course</option>
-                        <option value="Akashic Records">📜 Akashic Records</option>
-                    </select>
-                </div>
-
-                <!-- WhatsApp Submit Button -->
-                <button type="submit" class="btn-submit">
-                    SUBMIT 👆
-                </button>
-
-                <!-- Phone Call Button -->
-                <a href="tel:7704800153" class="btn-call">
-                    ➡️ 📱 CALL US
-                </a>
-
-                <!-- Contact Info Footer -->
-                <div class="contact-info-box">
-                    <p>📧 Email: <a href="mailto:skillgurueducation112@gmail.com"
+                        <option valu
