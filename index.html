@@ -416,8 +416,8 @@
     100% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.4), inset 0 0 10px rgba(34, 197, 94, 0.2); }
 }
 @keyframes fingerBounce {
-    0%, 100% { transform: translateX(0) scale(1); }
-    50% { transform: translateX(-6px) scale(1.15); }
+    0%, 100% { transform: translateX(0) scale(1) scaleX(-1); }
+    50% { transform: translateX(6px) scale(1.15) scaleX(-1); }
 }
 .social-main-box {
     border: 3.5px solid #22c55e;
@@ -462,6 +462,7 @@
     animation: fingerBounce 1s infinite ease-in-out;
     font-size: 1.3rem;
     display: inline-block;
+    transform: scaleX(-1);
 }
 </style>
 
@@ -469,34 +470,30 @@
     <div class="social-heading">✨ Join Social Media Channels Now ✨</div>
     
     <a href="https://www.youtube.com/@skillguru-d1d" target="_blank" class="social-btn youtube">
-        <span>🎬 YouTube</span>
-        <span class="pointing-finger">👉</span>
+        <span>YouTube</span>
+        <span class="pointing-finger"><i class="fab fa-youtube"></i></span>
     </a>
     
     <a href="https://www.instagram.com/skillguru_official?stkn=a2UzajdkZ2hneHJr" target="_blank" class="social-btn instagram">
-        <span>📸 Instagram</span>
-        <span class="pointing-finger">👉</span>
+        <span>Instagram</span>
+        <span class="pointing-finger"><i class="fab fa-instagram"></i></span>
     </a>
     
     <a href="https://www.facebook.com/share/1F2M2uhT1k/" target="_blank" class="social-btn facebook">
-        <span>👥 Facebook</span>
-        <span class="pointing-finger">👉</span>
+        <span>Facebook</span>
+        <span class="pointing-finger"><i class="fab fa-facebook"></i></span>
     </a>
     
     <a href="https://whatsapp.com/channel/0029VbEDWiq2P59gzkQk6d0w" target="_blank" class="social-btn whatsapp">
-        <span>💬 WhatsApp</span>
-        <span class="pointing-finger">👉</span>
+        <span>WhatsApp</span>
+        <span class="pointing-finger"><i class="fab fa-whatsapp"></i></span>
     </a>
     
     <a href="https://www.linkedin.com/in/harsh-pandey-20a89b43b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-btn linkedin">
-        <span>💼 LinkedIn</span>
-        <span class="pointing-finger">👉</span>
+        <span>LinkedIn</span>
+        <span class="pointing-finger"><i class="fab fa-linkedin"></i></span>
     </a>
-</div>     </div>
-
-            
-                </a>
-            </div>
+</div>
         </div>
 
         <!-- Stats Card -->
