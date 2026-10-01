@@ -104,12 +104,13 @@
         }
 
         .sub-tagline {
-            font-size: 0.85rem;
-            color: #94a3b8;
-            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary-yellow);
+            font-weight: 700;
             letter-spacing: 1.5px;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
         }
 
         .founders-container {
@@ -334,11 +335,6 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            transition: transform 0.2s ease;
-        }
-
-        .btn-submit:active {
-            transform: scale(0.97);
         }
 
         /* Direct Call Button */
@@ -356,64 +352,8 @@
             font-weight: 800;
             border-radius: 12px;
             margin-top: 15px;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             box-shadow: 0 4px 15px rgba(34, 197, 94, 0.35);
-        }
-
-        /* Highlighted Interactive Contact Details Box with Motion & Glow */
-        @keyframes contactGlow {
-            0% { border-color: #00d2ff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.2); }
-            50% { border-color: #ffd700; box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
-            100% { border-color: #00d2ff; box-shadow: 0 0 10px rgba(0, 210, 255, 0.2); }
-        }
-
-        .contact-info-box {
-            text-align: center;
-            background: linear-gradient(135deg, rgba(0, 210, 255, 0.12), rgba(17, 24, 39, 0.9));
-            border: 2px solid var(--bright-blue);
-            padding: 18px;
-            border-radius: 12px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            animation: contactGlow 3s infinite ease-in-out;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-info-box:hover {
-            transform: translateY(-3px);
-        }
-
-        .contact-info-box p {
-            color: #ffffff;
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin: 8px 0;
-            letter-spacing: 0.5px;
-        }
-
-        .contact-info-box a {
-            color: var(--primary-yellow);
-            text-decoration: none;
-            font-weight: 800;
-            text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
-            transition: color 0.2s ease;
-        }
-
-        .contact-info-box a:hover {
-            color: #00d2ff;
-            text-decoration: underline;
-        }
-
-        .footer-tagline {
-            text-align: center;
-            color: var(--primary-yellow);
-            font-size: 1.15rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-top: 25px;
-            margin-bottom: 15px;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
         }
 
         /* Gallery */
@@ -462,7 +402,7 @@
             </div>
 
             <h1 class="brand-title">SKILL GURU INSTITUTE</h1>
-            <p class="sub-tagline">Centre for Vedic & Occult Sciences</p>
+            <p class="sub-tagline">⭐ India's Best Astrology Class ⭐</p>
             
             <div class="founders-container">
                 <div class="founder-badge">
@@ -475,7 +415,7 @@
                 </div>
             </div>
 
-            <!-- Social Media Section -->
+            <!-- Social Media Section (Finger on left side pointing right towards logos) -->
             <div class="social-main-box">
                 <div class="social-heading">✨ Join Social Media Channels Now ✨</div>
                 
@@ -572,4 +512,37 @@
                         <option value="Astrology Course">⭐ Astrology Course</option>
                         <option value="Vastu Course">🏡 Vastu Course</option>
                         <option value="Numerology Course">🔢 Numerology Course</option>
-                        <option value="Palmistry Co
+                        <option value="Palmistry Course">✋ Palmistry Course</option>
+                        <option value="Card Reading Course">🃏 Card Reading Course</option>
+                        <option value="Graphology Course">✍️ Graphology Course</option>
+                        <option value="Reiki Course">👐 Reiki Course</option>
+                        <option value="Akashic Records">📜 Akashic Records</option>
+                    </select>
+                </div>
+
+                <!-- WhatsApp Submit Button -->
+                <button type="submit" class="btn-submit">
+                    SUBMIT 👆
+                </button>
+
+                <!-- Phone Call Button -->
+                <a href="tel:7704800153" class="btn-call">
+                    ➡️ 📱 CALL US
+                </a>
+            </form>
+        </div>
+
+        <div class="gallery-section">
+            <div class="gallery-card">
+                <img src="gallery1.jpg" alt="Vedic Astrology & Planetary Chart" onerror="this.src='https://via.placeholder.com/600x350/1f293d/ffffff?text=Vedic+Astrology+%26+Planetary+Chart';">
+                <div class="gallery-caption">✨ Live Interactive Astrology & Kundli Sessions 📜</div>
+            </div>
+            <div class="gallery-card">
+                <img src="gallery2.jpg" alt="Golden Horoscope Chart Reading" onerror="this.src='https://via.placeholder.com/600x350/1f293d/ffd700?text=Golden+Horoscope+Chart';">
+                <div class="gallery-caption">🔮 Master Horoscope, Palmistry & Vastu Shastra 🌌</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
