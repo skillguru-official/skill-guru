@@ -152,6 +152,7 @@
             font-size: 1.05rem;
         }
 
+        /* Social Section Animations & Styling */
         @keyframes glowPulse {
             0% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.4), inset 0 0 10px rgba(34, 197, 94, 0.2); }
             50% { box-shadow: 0 0 25px rgba(34, 197, 94, 0.9), inset 0 0 15px rgba(34, 197, 94, 0.5); }
@@ -214,6 +215,7 @@
             font-size: 1.05rem;
         }
 
+        /* Stats Card */
         .stats-card {
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
             border: 2px solid var(--bright-blue);
@@ -240,6 +242,7 @@
             line-height: 1.6;
         }
 
+        /* Offer Box */
         .offer-box {
             background: linear-gradient(135deg, #7c2d12 0%, #b91c1c 50%, #dc2626 100%);
             border-radius: 15px;
@@ -274,6 +277,7 @@
             font-weight: 600;
         }
 
+        /* Form Styling */
         .form-card {
             background: var(--card-bg);
             padding: 22px;
@@ -320,6 +324,7 @@
             border-color: var(--bright-blue);
         }
 
+        /* Submit Button */
         .btn-submit {
             width: 100%;
             background: linear-gradient(180deg, #ffe033 0%, #ffcc00 100%);
@@ -338,6 +343,7 @@
             gap: 10px;
         }
 
+        /* Direct Call Button */
         .btn-call {
             display: flex;
             align-items: center;
@@ -368,21 +374,47 @@
             font-size: 0.95rem;
         }
 
-        /* Classroom Image Container */
+        /* Luxury Animated Pink Border for Classroom Image */
+        @keyframes pinkBorderGlow {
+            0% { border-color: #ff3399; box-shadow: 0 0 15px rgba(255, 51, 153, 0.5), inset 0 0 10px rgba(255, 51, 153, 0.3); }
+            50% { border-color: #ff66cc; box-shadow: 0 0 30px rgba(255, 102, 204, 0.9), inset 0 0 20px rgba(255, 102, 204, 0.5); }
+            100% { border-color: #ff3399; box-shadow: 0 0 15px rgba(255, 51, 153, 0.5), inset 0 0 10px rgba(255, 51, 153, 0.3); }
+        }
+
+        @keyframes imageSmoothZoom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+
         .classroom-container {
             width: 100%;
             border-radius: 15px;
             overflow: hidden;
-            border: 2px solid var(--primary-yellow);
-            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+            border: 3.5px solid #ff3399;
+            box-shadow: 0 10px 30px rgba(255, 51, 153, 0.4);
             margin-top: 20px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            animation: pinkBorderGlow 3s infinite ease-in-out;
         }
 
         .classroom-container img {
             width: 100%;
             height: auto;
             display: block;
+            animation: imageSmoothZoom 6s infinite ease-in-out;
+            transition: transform 0.5s ease;
+        }
+
+        .extra-box-2 {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.95));
+            border: 2px solid rgba(0, 210, 255, 0.5);
+            border-radius: 12px;
+            padding: 14px;
+            text-align: center;
+            margin-top: 15px;
+            color: var(--primary-yellow);
+            font-weight: 700;
+            font-size: 0.95rem;
         }
 
         .extra-call-box {
@@ -468,13 +500,15 @@
         }
     </style>
 </head>
-    <body>
+<body>
 
     <div class="container">
+        <!-- Banner Image -->
         <div class="banner-container">
             <img src="banner.jpg" alt="Live Interactive Classes" onerror="this.src='https://via.placeholder.com/800x350/111827/ffd700?text=Skill+Guru+Institute';">
         </div>
 
+        <!-- Header / Founders Section -->
         <div class="header-section">
             <div class="astro-tag">
                 <span>🔮</span> Premium Astrology & Occult Academy <span>✨</span>
@@ -494,6 +528,7 @@
                 </div>
             </div>
 
+            <!-- Social Media Section -->
             <div class="social-main-box">
                 <div class="social-heading">✨ Join Social Media Channels Now ✨</div>
                 
@@ -539,6 +574,7 @@
             </div>
         </div>
 
+        <!-- Stats Card -->
         <div class="stats-card">
             <p class="stats-tag">🎓 Empowering Global Talent 🔮</p>
             <h3 class="stats-text">
@@ -546,12 +582,14 @@
             </h3>
         </div>
 
+        <!-- Offer Box -->
         <div class="offer-box">
             <h3>🌟 SPECIAL LIMITED TIME OFFER 🌟</h3>
             <div class="offer-badge">FLAT 50% OFF ON ALL FEES</div>
             <p class="offer-subtext">Apply now for professional Astrology & Occult courses at half price!</p>
         </div>
 
+        <!-- Form Section -->
         <div class="form-card">
             <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
                 <div class="form-row">
@@ -589,18 +627,20 @@
                         <option value="Numerology Course">🔢 Numerology Course</option>
                         <option value="Palmistry Course">✋ Palmistry Course</option>
                         <option value="Card Reading Course">🃏 Card Reading Course</option>
-                        <option value="Graphology Course">✍️️ Graphology Course</option>
+                        <option value="Graphology Course">✍️ Graphology Course</option>
                         <option value="Reiki Course">👐 Reiki Course</option>
                         <option value="Akashic Records">📜 Akashic Records</option>
                     </select>
                 </div>
 
+                <!-- WhatsApp Submit Button -->
                 <button type="submit" class="btn-submit">
                     SUBMIT 👆
                 </button>
 
+                <!-- Phone Call Button -->
                 <a href="tel:7704800153" class="btn-call">
-                    ➡️️ 📱 CALL US
+                    ➡️ 📱 CALL US
                 </a>
             </form>
 
@@ -608,9 +648,13 @@
                 ✨ Live Interactive Astrology & Kundli Sessions 📜
             </div>
 
-            <!-- Newly Added Classroom Image -->
+            <!-- Newly Added Classroom Image with Luxury Animated Pink Border -->
             <div class="classroom-container">
                 <img src="classroom.jpg" alt="Join The Best Class Now" onerror="this.src='https://via.placeholder.com/800x450/111827/ffd700?text=Join+The+Best+Class+Now';">
+            </div>
+
+            <div class="extra-box-2">
+                🔮 Master Horoscope, Palmistry & Vastu Shastra 🌌
             </div>
 
             <div class="extra-call-box">
@@ -642,6 +686,7 @@
         </div>
     </div>
 
+    <!-- JavaScript for WhatsApp Form Submission -->
     <script>
         function sendToWhatsApp(event) {
             event.preventDefault();
@@ -653,7 +698,7 @@
             let userLocation = document.getElementById('userLocation').value;
             let userCourse = document.getElementById('userCourse').value;
 
-            let adminPhoneNumber = "917704800153";
+            let adminPhoneNumber = "917704800153"; // Institute WhatsApp Number
 
             let message = `*New Student Enrollment Request*%0A%0A` +
                           `👤 *Name:* ${firstName} ${lastName}%0A` +
