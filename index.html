@@ -47,7 +47,6 @@
             box-shadow: 0 0 20px rgba(0, 136, 255, 0.35), inset 0 0 15px rgba(0, 136, 255, 0.15);
         }
 
-        /* Banner Image */
         .banner-container {
             width: 100%;
             border-radius: 15px;
@@ -63,7 +62,6 @@
             display: block;
         }
 
-        /* Header Section */
         .header-section {
             text-align: center;
             background: var(--card-bg);
@@ -146,7 +144,6 @@
             font-size: 1.05rem;
         }
 
-        /* Social Section Animations & Styling */
         @keyframes glowPulse {
             0% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.4), inset 0 0 10px rgba(34, 197, 94, 0.2); }
             50% { box-shadow: 0 0 25px rgba(34, 197, 94, 0.9), inset 0 0 15px rgba(34, 197, 94, 0.5); }
@@ -209,7 +206,6 @@
             font-size: 1.05rem;
         }
 
-        /* Stats Card */
         .stats-card {
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
             border: 2px solid var(--bright-blue);
@@ -236,7 +232,6 @@
             line-height: 1.6;
         }
 
-        /* Offer Box */
         .offer-box {
             background: linear-gradient(135deg, #7c2d12 0%, #b91c1c 50%, #dc2626 100%);
             border-radius: 15px;
@@ -271,7 +266,6 @@
             font-weight: 600;
         }
 
-        /* Form Styling */
         .form-card {
             background: var(--card-bg);
             padding: 22px;
@@ -318,7 +312,6 @@
             border-color: var(--bright-blue);
         }
 
-        /* Submit Button */
         .btn-submit {
             width: 100%;
             background: linear-gradient(180deg, #ffe033 0%, #ffcc00 100%);
@@ -337,7 +330,6 @@
             gap: 10px;
         }
 
-        /* Direct Call Button */
         .btn-call {
             display: flex;
             align-items: center;
@@ -356,7 +348,6 @@
             box-shadow: 0 4px 15px rgba(34, 197, 94, 0.35);
         }
 
-        /* Extra Custom Feature Boxes matching your reference image */
         .extra-box-1 {
             background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.95));
             border: 2px solid rgba(0, 210, 255, 0.5);
@@ -421,7 +412,6 @@
             text-shadow: 0 0 12px rgba(0, 210, 255, 0.5);
         }
 
-        /* Gallery */
         .gallery-section {
             display: flex;
             flex-direction: column;
@@ -456,12 +446,10 @@
 <body>
 
     <div class="container">
-        <!-- Banner Image -->
         <div class="banner-container">
             <img src="banner.jpg" alt="Live Interactive Classes" onerror="this.src='https://via.placeholder.com/800x350/111827/ffd700?text=Skill+Guru+Institute';">
         </div>
 
-        <!-- Header / Founders Section -->
         <div class="header-section">
             <div class="astro-tag">
                 <span>🔮</span> Premium Astrology & Occult Academy <span>✨</span>
@@ -481,7 +469,6 @@
                 </div>
             </div>
 
-            <!-- Social Media Section -->
             <div class="social-main-box">
                 <div class="social-heading">✨ Join Social Media Channels Now ✨</div>
                 
@@ -527,7 +514,6 @@
             </div>
         </div>
 
-        <!-- Stats Card -->
         <div class="stats-card">
             <p class="stats-tag">🎓 Empowering Global Talent 🔮</p>
             <h3 class="stats-text">
@@ -535,14 +521,12 @@
             </h3>
         </div>
 
-        <!-- Offer Box -->
         <div class="offer-box">
             <h3>🌟 SPECIAL LIMITED TIME OFFER 🌟</h3>
             <div class="offer-badge">FLAT 50% OFF ON ALL FEES</div>
             <p class="offer-subtext">Apply now for professional Astrology & Occult courses at half price!</p>
         </div>
 
-        <!-- Form Section -->
         <div class="form-card">
             <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
                 <div class="form-row">
@@ -576,4 +560,81 @@
                     <select id="userCourse" class="form-control" required>
                         <option value="">Choose your Course</option>
                         <option value="Astrology Course">⭐ Astrology Course</option>
-             
+                        <option value="Vastu Course">🏡 Vastu Course</option>
+                        <option value="Numerology Course">🔢 Numerology Course</option>
+                        <option value="Palmistry Course">✋ Palmistry Course</option>
+                        <option value="Card Reading Course">🃏 Card Reading Course</option>
+                        <option value="Graphology Course">✍️ Graphology Course</option>
+                        <option value="Reiki Course">👐 Reiki Course</option>
+                        <option value="Akashic Records">📜 Akashic Records</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    SUBMIT 👆
+                </button>
+
+                <a href="tel:7704800153" class="btn-call">
+                    ➡️ 📱 CALL US
+                </a>
+            </form>
+
+            <div class="extra-box-1">
+                ✨ Live Interactive Astrology & Kundli Sessions 📜
+            </div>
+
+            <div class="extra-call-box">
+                <a href="tel:7704800153">
+                    📞 CALL ME 7704800153 ✔️
+                </a>
+            </div>
+
+            <div class="extra-email-box">
+                <a href="mailto:skillgurueducation112@gmail.com">
+                    ✉️ skillgurueducation112@gmail.com
+                </a>
+            </div>
+
+            <div class="footer-tagline-bottom">
+                INDIA'S BEST ASTROLOGY CLASS
+            </div>
+        </div>
+
+        <div class="gallery-section">
+            <div class="gallery-card">
+                <img src="gallery1.jpg" alt="Vedic Astrology & Planetary Chart" onerror="this.src='https://via.placeholder.com/600x350/1f293d/ffffff?text=Vedic+Astrology+%26+Planetary+Chart';">
+                <div class="gallery-caption">✨ Live Interactive Astrology & Kundli Sessions 📜</div>
+            </div>
+            <div class="gallery-card">
+                <img src="gallery2.jpg" alt="Golden Horoscope Chart Reading" onerror="this.src='https://via.placeholder.com/600x350/1f293d/ffd700?text=Golden+Horoscope+Chart';">
+                <div class="gallery-caption">🔮 Master Horoscope, Palmistry & Vastu Shastra 🌌</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+
+            let firstName = document.getElementById('firstName').value;
+            let lastName = document.getElementById('lastName').value;
+            let userPhone = document.getElementById('userPhone').value;
+            let userEmail = document.getElementById('userEmail').value;
+            let userLocation = document.getElementById('userLocation').value;
+            let userCourse = document.getElementById('userCourse').value;
+
+            let adminPhoneNumber = "917704800153";
+
+            let message = `*New Student Enrollment Request*%0A%0A` +
+                          `👤 *Name:* ${firstName} ${lastName}%0A` +
+                          `📱 *WhatsApp:* ${userPhone}%0A` +
+                          `📧 *Email:* ${userEmail}%0A` +
+                          `📍 *Location:* ${userLocation}%0A` +
+                          `🎓 *Course:* ${userCourse}`;
+
+            let whatsappURL = `https://wa.me/${adminPhoneNumber}?text=${message}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>
