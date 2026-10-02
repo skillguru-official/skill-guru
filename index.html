@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <link rel="icon" type="image/jpeg" href="IMG-20260927-WA0004.jpg">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Guru Institute | Astrology & Occult Courses</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Skill Guru Institute | Best Astrology Class</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Cinzel:wght@700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -14,12 +13,10 @@
             --primary-yellow: #ffd700;
             --accent-red: #ff3333;
             --bright-blue: #00d2ff;
-            --border-blue: #0088ff;
             --bg-dark: #0a0e1a;
             --card-bg: #111827;
             --input-bg: #1f293d;
             --text-light: #ffffff;
-            --text-gray: #b3b3b3;
         }
 
         * {
@@ -27,660 +24,420 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
             background-color: var(--bg-dark);
             color: var(--text-light);
-            line-height: 1.6;
-            padding: 15px;
-            padding-bottom: 40px;
+            line-height: 1.5;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
         }
 
-        @keyframes greenBorderGlow {
-            0% { border-color: #22c55e; box-shadow: 0 0 15px rgba(34, 197, 94, 0.4), inset 0 0 15px rgba(34, 197, 94, 0.2); }
-            50% { border-color: #00ffcc; box-shadow: 0 0 30px rgba(0, 255, 204, 0.8), inset 0 0 25px rgba(0, 255, 204, 0.4); }
-            100% { border-color: #22c55e; box-shadow: 0 0 15px rgba(34, 197, 94, 0.4), inset 0 0 15px rgba(34, 197, 94, 0.2); }
-        }
-
+        /* Main Container - Phone Screen */
         .container {
-            max-width: 600px;
+            width: 100%;
+            max-width: 480px;
             margin: 0 auto;
             border: 4px solid #22c55e;
             border-radius: 20px;
-            padding: 18px;
+            padding: 15px;
             background: rgba(17, 24, 39, 0.5);
             animation: greenBorderGlow 4s infinite ease-in-out;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.7);
         }
 
-        /* Banner Image */
+        @keyframes greenBorderGlow {
+            0%, 100% { border-color: #22c55e; box-shadow: 0 0 15px rgba(34, 197, 94, 0.4); }
+            50% { border-color: #00ffcc; box-shadow: 0 0 30px rgba(0, 255, 204, 0.8); }
+        }
+
+        /* General Box Styling */
+        .box-common {
+            width: 100%;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--bright-blue);
+            background: var(--card-bg);
+            font-weight: 700;
+            font-size: 0.9rem;
+            word-break: break-word;
+        }
+
+        /* Top Banner */
         .banner-container {
             width: 100%;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 210, 255, 0.25);
-            margin-bottom: 20px;
-            border: 2px solid var(--bright-blue);
+            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
         }
-
         .banner-container img {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        /* Header Section */
+        /* Header / Founders Section */
         .header-section {
-            text-align: center;
-            background: var(--card-bg);
-            padding: 24px 20px;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(0, 210, 255, 0.3);
+            padding: 20px 15px;
         }
-
         .astro-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(0, 210, 255, 0.12);
+            font-size: 0.7rem;
             color: var(--bright-blue);
-            border: 1px solid rgba(0, 210, 255, 0.4);
-            padding: 4px 14px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
-
         .brand-title {
             font-family: 'Cinzel', serif;
-            font-size: 2.1rem;
-            font-weight: 800;
-            letter-spacing: 2px;
+            font-size: 1.8rem;
             background: linear-gradient(135deg, #FFF5C0 0%, #FFD700 50%, #FFA500 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
-            text-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-            margin-bottom: 4px;
-            line-height: 1.2;
+            line-height: 1.1;
+            margin-bottom: 3px;
         }
-
         .sub-tagline {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--primary-yellow);
-            font-weight: 700;
-            letter-spacing: 1.5px;
             text-transform: uppercase;
-            margin-bottom: 15px;
-            text-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+            margin-bottom: 12px;
         }
-
-        .founders-container {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin: 18px 0;
-        }
-
         .founder-badge {
-            background: linear-gradient(135deg, rgba(255, 51, 51, 0.12), rgba(17, 24, 39, 0.9));
             border: 1.5px solid #ff3333;
-            border-left: 4px solid #ff3333;
-            border-radius: 10px;
-            padding: 10px 15px;
+            border-radius: 8px;
+            padding: 8px;
+            margin-bottom: 6px;
+            background: linear-gradient(135deg, rgba(255, 51, 51, 0.1), transparent);
+            font-size: 0.85rem;
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 10px;
-            box-shadow: 0 4px 12px rgba(255, 51, 51, 0.15);
+            gap: 5px;
         }
 
-        .founder-title {
-            color: #ff4d4d;
-            font-weight: 800;
-            font-size: 1.05rem;
-            text-transform: uppercase;
-        }
-
-        .founder-name {
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 1.05rem;
-        }
-
-        /* Social Section Animations & Styling */
-        @keyframes glowPulse {
-            0% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.4), inset 0 0 10px rgba(34, 197, 94, 0.2); }
-            50% { box-shadow: 0 0 25px rgba(34, 197, 94, 0.9), inset 0 0 15px rgba(34, 197, 94, 0.5); }
-            100% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.4), inset 0 0 10px rgba(34, 197, 94, 0.2); }
-        }
-        @keyframes fingerBounce {
-            0%, 100% { transform: translateX(0) scale(1); }
-            50% { transform: translateX(6px) scale(1.15); }
-        }
+        /* Social Media Box */
         .social-main-box {
             border: 3.5px solid #22c55e;
             border-radius: 16px;
-            padding: 22px 15px;
+            padding: 15px;
             background: rgba(17, 24, 39, 0.95);
-            text-align: center;
-            margin: 25px 0;
             animation: glowPulse 3s infinite ease-in-out;
+        }
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.4); }
+            50% { box-shadow: 0 0 25px rgba(34, 197, 94, 0.9); }
         }
         .social-heading {
             color: #22c55e;
-            font-size: 1.25rem;
-            font-weight: 800;
-            margin-bottom: 18px;
+            font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 10px;
         }
         .social-btn {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
-            gap: 15px;
+            justify-content: center;
+            gap: 8px;
             color: white;
-            padding: 13px 22px;
-            border-radius: 30px;
+            padding: 10px;
+            border-radius: 25px;
             text-decoration: none;
             font-weight: 700;
-            margin: 12px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            transition: transform 0.2s ease;
+            margin: 6px 0;
+            width: 100%;
+            font-size: 0.9rem;
         }
-        .social-btn:active {
-            transform: scale(0.97);
-        }
-        .social-btn.youtube { background: linear-gradient(135deg, #ff0000, #cc0000); }
-        .social-btn.instagram { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-        .social-btn.facebook { background: linear-gradient(135deg, #1877f2, #0d5bc6); }
-        .social-btn.whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); }
-        .social-btn.linkedin { background: linear-gradient(135deg, #0a66c2, #004182); }
-
+        .social-btn.youtube { background: #ff0000; }
+        .social-btn.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+        .social-btn.facebook { background: #1877f2; }
+        .social-btn.whatsapp { background: #25d366; }
+        .social-btn.linkedin { background: #0a66c2; }
         .pointing-finger {
             animation: fingerBounce 1s infinite ease-in-out;
-            font-size: 1.3rem;
-            display: inline-block;
+            font-size: 1.1rem;
+        }
+        @keyframes fingerBounce {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(4px); }
         }
 
-        .social-btn-content {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.05rem;
-        }
-
-        /* Stats Card */
+        /* Stats & Offer */
         .stats-card {
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-            border: 2px solid var(--bright-blue);
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 10px 25px rgba(0, 210, 255, 0.2);
-            margin-bottom: 20px;
+            font-size: 0.9rem;
+            padding: 15px;
         }
-
-        .stats-tag {
-            color: var(--primary-yellow);
-            font-size: 1.1rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-
-        .stats-text {
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: 600;
-            line-height: 1.6;
-        }
-
-        /* Offer Box */
+        .stats-tag { color: var(--primary-yellow); font-size: 1rem; }
         .offer-box {
-            background: linear-gradient(135deg, #7c2d12 0%, #b91c1c 50%, #dc2626 100%);
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
+            background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
             border: 2px solid var(--primary-yellow);
-            box-shadow: 0 8px 20px rgba(220, 38, 38, 0.35);
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
         }
-
-        .offer-box h3 {
-            font-size: 1.2rem;
-            color: #ffffff;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
         .offer-badge {
             background-color: var(--primary-yellow);
             color: #000000;
-            font-size: 1.6rem;
-            font-weight: 900;
-            padding: 8px 20px;
-            border-radius: 10px;
-            display: inline-block;
-            margin: 10px 0;
+            font-size: 1.2rem;
+            padding: 6px 12px;
+            border-radius: 8px;
+            margin: 8px 0;
         }
 
-        .offer-subtext {
-            font-size: 0.9rem;
-            color: #fef08a;
-            font-weight: 600;
-        }
-
-        /* Form Styling */
-        .form-card {
-            background: var(--card-bg);
-            padding: 22px;
-            border-radius: 15px;
-            border: 1px solid rgba(0, 210, 255, 0.25);
-            margin-bottom: 20px;
-        }
-
-        .form-row {
-            display: flex;
-            gap: 12px;
-        }
-
-        .form-row .form-group {
-            flex: 1;
-        }
-
-        .form-group {
-            margin-bottom: 18px;
-        }
-
-        .form-group label {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #ffffff;
-        }
-
+        /* Form */
+        .form-card { padding: 15px; gap: 10px; }
+        .form-group label { font-size: 0.85rem; margin-bottom: 3px; }
         .form-control {
             width: 100%;
-            padding: 14px;
-            border-radius: 10px;
+            padding: 10px;
+            border-radius: 8px;
             border: 1px solid #334155;
             background-color: var(--input-bg);
             color: #ffffff;
-            font-size: 1rem;
-            outline: none;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
         }
-
-        .form-control:focus {
-            border-color: var(--bright-blue);
-        }
-
-        /* Submit Button */
         .btn-submit {
             width: 100%;
             background: linear-gradient(180deg, #ffe033 0%, #ffcc00 100%);
             color: #cc0000;
-            border: none;
-            padding: 16px;
-            font-size: 1.6rem;
-            font-weight: 900;
-            border-radius: 12px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
+            padding: 12px;
+            font-size: 1.2rem;
+            border-radius: 10px;
         }
-
-        /* Direct Call Button */
         .btn-call {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
             width: 100%;
             background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 15px;
-            font-size: 1.3rem;
-            font-weight: 800;
-            border-radius: 12px;
-            margin-top: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.35);
+            padding: 12px;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            margin: 10px 0;
         }
 
-        .extra-box-1 {
-            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.95));
-            border: 2px solid rgba(0, 210, 255, 0.5);
-            border-radius: 12px;
-            padding: 14px;
-            text-align: center;
-            margin-top: 15px;
-            color: var(--primary-yellow);
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-
-        /* Luxury Animated Pink Border for Classroom Image */
+        /* Classroom Image with Animated Pink Border & Zoom */
         @keyframes pinkBorderGlow {
-            0% { border-color: #ff3399; box-shadow: 0 0 15px rgba(255, 51, 153, 0.5), inset 0 0 10px rgba(255, 51, 153, 0.3); }
-            50% { border-color: #ff66cc; box-shadow: 0 0 30px rgba(255, 102, 204, 0.9), inset 0 0 20px rgba(255, 102, 204, 0.5); }
-            100% { border-color: #ff3399; box-shadow: 0 0 15px rgba(255, 51, 153, 0.5), inset 0 0 10px rgba(255, 51, 153, 0.3); }
+            0%, 100% { border-color: #ff3399; box-shadow: 0 0 10px rgba(255, 51, 153, 0.5); }
+            50% { border-color: #ff66cc; box-shadow: 0 0 20px rgba(255, 102, 204, 0.9); }
         }
-
         @keyframes imageSmoothZoom {
             0%, 100% { transform: scale(1); }
             50% { transform: scale(1.03); }
         }
-
         .classroom-container {
             width: 100%;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
             border: 3.5px solid #ff3399;
             box-shadow: 0 10px 30px rgba(255, 51, 153, 0.4);
-            margin-top: 20px;
-            margin-bottom: 20px;
             animation: pinkBorderGlow 3s infinite ease-in-out;
+            margin: 10px 0;
         }
-
         .classroom-container img {
             width: 100%;
             height: auto;
             display: block;
             animation: imageSmoothZoom 6s infinite ease-in-out;
-            transition: transform 0.5s ease;
         }
 
-        .extra-box-2 {
-            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.95));
-            border: 2px solid rgba(0, 210, 255, 0.5);
-            border-radius: 12px;
-            padding: 14px;
-            text-align: center;
-            margin-top: 15px;
-            color: var(--primary-yellow);
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-
-        .extra-call-box {
-            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(10, 14, 26, 0.95));
-            border: 2px solid var(--primary-yellow);
-            border-radius: 12px;
-            padding: 14px;
-            text-align: center;
-            margin-top: 15px;
-            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
-        }
-
-        .extra-call-box a {
-            color: #ff6b6b;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.15rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
+        /* Contact Boxes */
+        .contact-box { padding: 15px; gap: 5px; }
+        .contact-box a { word-break: break-all; font-size: 0.9rem; }
         .extra-email-box {
-            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(17, 24, 39, 0.95));
-            border: 2px solid rgba(0, 210, 255, 0.5);
-            border-radius: 12px;
-            padding: 14px;
-            text-align: center;
-            margin-top: 15px;
+             padding: 10px;
+             font-size: 0.8rem;
+             border-radius: 8px;
         }
-
         .extra-email-box a {
+            font-size: 0.8rem;
             color: #ffffff;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
         }
 
-        .footer-tagline-bottom {
-            text-align: center;
-            margin-top: 20px;
+        .footer-tagline {
             color: var(--bright-blue);
-            font-weight: 900;
-            font-size: 1.1rem;
-            letter-spacing: 1.5px;
+            font-size: 1rem;
             text-transform: uppercase;
-            text-shadow: 0 0 12px rgba(0, 210, 255, 0.5);
+            letter-spacing: 1px;
+            margin-top: 15px;
+            text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
         }
 
+        /* Gallery */
         .gallery-section {
             display: flex;
             flex-direction: column;
-            gap: 18px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            gap: 10px;
+            margin-top: 10px;
+            width: 100%;
         }
-
         .gallery-card {
             width: 100%;
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
             border: 2px solid rgba(0, 210, 255, 0.4);
         }
-
         .gallery-card img {
             width: 100%;
             height: auto;
             display: block;
         }
-
         .gallery-caption {
             background: rgba(17, 24, 39, 0.85);
             color: var(--primary-yellow);
             text-align: center;
-            padding: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
+            padding: 6px;
+            font-size: 0.7rem;
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <!-- Banner Image -->
+        <div class="container">
+        <!-- 1. Top Banner -->
         <div class="banner-container">
-            <img src="banner.jpg" alt="Live Interactive Classes" onerror="this.src='https://via.placeholder.com/800x350/111827/ffd700?text=Skill+Guru+Institute';">
+            <img src="banner.jpg" alt="Live Interactive Classes Banner" onerror="this.src='https://via.placeholder.com/600x250/111827/ffd700?text=Skill+Guru+Institute';">
         </div>
 
-        <!-- Header / Founders Section -->
-        <div class="header-section">
+        <!-- 2. Header / Founders -->
+        <div class="box-common header-section">
             <div class="astro-tag">
                 <span>🔮</span> Premium Astrology & Occult Academy <span>✨</span>
             </div>
-
             <h1 class="brand-title">SKILL GURU INSTITUTE</h1>
             <p class="sub-tagline">⭐ India's Best Astrology Class ⭐</p>
             
-            <div class="founders-container">
-                <div class="founder-badge">
-                    <span class="founder-title">👑 Founder:</span>
-                    <span class="founder-name">Harsh Pandey</span>
-                </div>
-                <div class="founder-badge">
-                    <span class="founder-title">💎 Co-Founder:</span>
-                    <span class="founder-name">Rohit Pandey</span>
-                </div>
+            <div class="founder-badge">
+                <span style="color: #ff4d4d; font-weight: 800;">👑 Founder:</span>
+                <span style="color: #ffffff;">Harsh Pandey</span>
             </div>
-
-            <!-- Social Media Section -->
-            <div class="social-main-box">
-                <div class="social-heading">✨ Join Social Media Channels Now ✨</div>
-                
-                <a href="https://www.youtube.com/@skillguru-d1d" target="_blank" class="social-btn youtube">
-                    <span class="pointing-finger">👉</span>
-                    <div class="social-btn-content">
-                        <i class="fab fa-youtube" style="font-size: 1.4rem;"></i>
-                        <span>YouTube</span>
-                    </div>
-                </a>
-                
-                <a href="https://www.instagram.com/skillguru_official?stkn=a2UzajdkZ2hneHJr" target="_blank" class="social-btn instagram">
-                    <span class="pointing-finger">👉</span>
-                    <div class="social-btn-content">
-                        <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
-                        <span>Instagram</span>
-                    </div>
-                </a>
-                
-                <a href="https://www.facebook.com/share/1F2M2uhT1k/" target="_blank" class="social-btn facebook">
-                    <span class="pointing-finger">👉</span>
-                    <div class="social-btn-content">
-                        <i class="fab fa-facebook" style="font-size: 1.4rem;"></i>
-                        <span>Facebook</span>
-                    </div>
-                </a>
-                
-                <a href="https://whatsapp.com/channel/0029VbEDWiq2P59gzkQk6d0w" target="_blank" class="social-btn whatsapp">
-                    <span class="pointing-finger">👉</span>
-                    <div class="social-btn-content">
-                        <i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i>
-                        <span>WhatsApp</span>
-                    </div>
-                </a>
-                
-                <a href="https://www.linkedin.com/in/harsh-pandey-20a89b43b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-btn linkedin">
-                    <span class="pointing-finger">👉</span>
-                    <div class="social-btn-content">
-                        <i class="fab fa-linkedin" style="font-size: 1.4rem;"></i>
-                        <span>LinkedIn</span>
-                    </div>
-                </a>
+            <div class="founder-badge">
+                <span style="color: #ff4d4d; font-weight: 800;">💎 Co-Founder:</span>
+                <span style="color: #ffffff;">Rohit Pandey</span>
             </div>
         </div>
 
-        <!-- Stats Card -->
-        <div class="stats-card">
+        <!-- 3. Social Media Box -->
+        <div class="social-main-box">
+            <div class="social-heading">✨ Join Social Media Channels Now ✨</div>
+            <a href="https://www.youtube.com/@skillguru-d1d" target="_blank" class="social-btn youtube">
+                <span class="pointing-finger">👉</span> YouTube
+            </a>
+            <a href="https://www.instagram.com/skillguru_official?stkn=a2UzajdkZ2hneHJr" target="_blank" class="social-btn instagram">
+                <span class="pointing-finger">👉</span> Instagram
+            </a>
+            <a href="https://www.facebook.com/share/1F2M2uhT1k/" target="_blank" class="social-btn facebook">
+                <span class="pointing-finger">👉</span> Facebook
+            </a>
+            <a href="https://whatsapp.com/channel/0029VbEDWiq2P59gzkQk6d0w" target="_blank" class="social-btn whatsapp">
+                <span class="pointing-finger">👉</span> WhatsApp
+            </a>
+            <a href="https://www.linkedin.com/in/harsh-pandey-20a89b43b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-btn linkedin">
+                <span class="pointing-finger">👉</span> LinkedIn
+            </a>
+        </div>
+
+        <!-- 4. Stats -->
+        <div class="box-common stats-card">
             <p class="stats-tag">🎓 Empowering Global Talent 🔮</p>
-            <h3 class="stats-text">
+            <h3 style="color: #ffffff; font-weight: 600; margin-top: 5px;">
                 Successfully Empowered <span style="color: #ff3333; font-weight: 800; text-decoration: underline;">2,000+ Professional Astrologers</span> with Expert Training & Guidance 📜✨
             </h3>
         </div>
 
-        <!-- Offer Box -->
-        <div class="offer-box">
-            <h3>🌟 SPECIAL LIMITED TIME OFFER 🌟</h3>
+        <!-- 5. Offer -->
+        <div class="box-common offer-box">
+            <h3 style="color: #ffffff; font-weight: 700;">🌟 SPECIAL LIMITED TIME OFFER 🌟</h3>
             <div class="offer-badge">FLAT 50% OFF ON ALL FEES</div>
-            <p class="offer-subtext">Apply now for professional Astrology & Occult courses at half price!</p>
+            <p style="color: #fef08a; font-weight: 600; font-size: 0.85rem;">Apply now for professional Astrology & Occult courses at half price!</p>
         </div>
 
-        <!-- Form Section -->
-        <div class="form-card">
-            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label><i class="fas fa-user"></i> First Name</label>
-                        <input type="text" id="firstName" class="form-control" placeholder="First Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label><i class="fas fa-user"></i> Last Name</label>
-                        <input type="text" id="lastName" class="form-control" placeholder="Last Name" required>
-                    </div>
+        <!-- 6. Form & New Classroom Image -->
+        <div class="box-common form-card">
+            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)" style="width: 100%;">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> First Name</label>
+                    <input type="text" id="firstName" class="form-control" placeholder="First Name" required>
                 </div>
-
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Last Name</label>
+                    <input type="text" id="lastName" class="form-control" placeholder="Last Name" required>
+                </div>
                 <div class="form-group">
                     <label><i class="fab fa-whatsapp" style="color: #25d366;"></i> WhatsApp Number</label>
-                    <input type="tel" id="userPhone" class="form-control" placeholder="+91 WhatsApp Number" required>
+                    <input type="tel" id="userPhone" class="form-control" placeholder="+91 WhatsApp" required>
                 </div>
-
                 <div class="form-group">
                     <label><i class="fas fa-envelope" style="color: #ea4335;"></i> Email Address</label>
                     <input type="email" id="userEmail" class="form-control" placeholder="your.email@gmail.com" required>
                 </div>
-
                 <div class="form-group">
                     <label><i class="fas fa-map-marker-alt" style="color: #ff4d4d;"></i> Location / City</label>
-                    <input type="text" id="userLocation" class="form-control" placeholder="Your City / Location" required>
+                    <input type="text" id="userLocation" class="form-control" placeholder="City / Location" required>
                 </div>
-
                 <div class="form-group">
                     <label><i class="fas fa-graduation-cap"></i> Choose Your Course</label>
                     <select id="userCourse" class="form-control" required>
-                        <option value="">Choose your Course</option>
-                        <option value="Astrology Course">⭐ Astrology Course</option>
-                        <option value="Vastu Course">🏡 Vastu Course</option>
-                        <option value="Numerology Course">🔢 Numerology Course</option>
-                        <option value="Palmistry Course">✋ Palmistry Course</option>
-                        <option value="Card Reading Course">🃏 Card Reading Course</option>
-                        <option value="Graphology Course">✍️ Graphology Course</option>
-                        <option value="Reiki Course">👐 Reiki Course</option>
+                        <option value="">Choose Course</option>
+                        <option value="Astrology Course">⭐ Astrology</option>
+                        <option value="Vastu Course">🏡 Vastu</option>
+                        <option value="Numerology Course">🔢 Numerology</option>
+                        <option value="Palmistry Course">✋ Palmistry</option>
+                        <option value="Card Reading Course">🃏 Card Reading</option>
+                        <option value="Graphology Course">✍️️ Graphology</option>
+                        <option value="Reiki Course">👐 Reiki</option>
                         <option value="Akashic Records">📜 Akashic Records</option>
                     </select>
                 </div>
-
-                <!-- WhatsApp Submit Button -->
-                <button type="submit" class="btn-submit">
-                    SUBMIT 👆
-                </button>
-
-                <!-- Phone Call Button -->
-                <a href="tel:7704800153" class="btn-call">
-                    ➡️ 📱 CALL US
-                </a>
+                <button type="submit" class="btn-submit">SUBMIT 👆</button>
+                <a href="tel:7704800153" class="btn-call">➡️ 📱 CALL US</a>
             </form>
 
-            <div class="extra-box-1">
-                ✨ Live Interactive Astrology & Kundli Sessions 📜
-            </div>
-
-            <!-- Newly Added Classroom Image with Luxury Animated Pink Border -->
+            <!-- Newly Added Classroom Image with Luxury Animated Pink Border & Zoom -->
             <div class="classroom-container">
-                <img src="classroom.jpg" alt="Join The Best Class Now" onerror="this.src='https://via.placeholder.com/800x450/111827/ffd700?text=Join+The+Best+Class+Now';">
+                <img src="classroom.jpg" alt="Join The Best Class Now" onerror="this.src='https://via.placeholder.com/600x337/111827/ffd700?text=Join+The+Best+Class+Now';">
             </div>
 
-            <div class="extra-box-2">
-                🔮 Master Horoscope, Palmistry & Vastu Shastra 🌌
-            </div>
-
-            <div class="extra-call-box">
-                <a href="tel:7704800153">
+            <div class="box-common contact-box">
+                <div style="color: var(--primary-yellow); font-size: 0.8rem;">
+                    🔮 Master Horoscope, Palmistry & Vastu Shastra 🌌
+                </div>
+                <a href="tel:7704800153" style="color: #ff6b6b; text-decoration: none; font-weight: 800; margin-top: 8px;">
                     📞 CALL ME 7704800153 ✔️
                 </a>
             </div>
 
-            <div class="extra-email-box">
-                <a href="mailto:skillgurueducation112@gmail.com">
-                    ✉️ skillgurueducation112@gmail.com
-                </a>
+            <!-- Fixed Email Box for Mobile View -->
+            <div class="box-common extra-email-box contact-box">
+                <i class="fas fa-envelope" style="color: #ea4335; margin-bottom: 4px;"></i>
+                <a href="mailto:skillgurueducation112@gmail.com">skillgurueducation112@gmail.com</a>
             </div>
 
-            <div class="footer-tagline-bottom">
+            <div class="footer-tagline">
                 INDIA'S BEST ASTROLOGY CLASS
             </div>
         </div>
 
+        <!-- 7. Gallery -->
         <div class="gallery-section">
             <div class="gallery-card">
-                <img src="gallery1.jpg" alt="Vedic Astrology & Planetary Chart" onerror="this.src='https://via.placeholder.com/600x350/1f293d/ffffff?text=Vedic+Astrology+%26+Planetary+Chart';">
+                <img src="gallery1.jpg" alt="Vedic Astrology Chart" onerror="this.src='https://via.placeholder.com/400x200/1f293d/ffffff?text=Vedic+Astrology';">
                 <div class="gallery-caption">✨ Live Interactive Astrology & Kundli Sessions 📜</div>
             </div>
             <div class="gallery-card">
-                <img src="gallery2.jpg" alt="Golden Horoscope Chart Reading" onerror="this.src='https://via.placeholder.com/600x350/1f293d/ffd700?text=Golden+Horoscope+Chart';">
+                <img src="gallery2.jpg" alt="Horoscope Reading" onerror="this.src='https://via.placeholder.com/400x200/1f293d/ffd700?text=Horoscope+Reading';">
                 <div class="gallery-caption">🔮 Master Horoscope, Palmistry & Vastu Shastra 🌌</div>
             </div>
         </div>
@@ -690,23 +447,19 @@
     <script>
         function sendToWhatsApp(event) {
             event.preventDefault();
-
             let firstName = document.getElementById('firstName').value;
             let lastName = document.getElementById('lastName').value;
             let userPhone = document.getElementById('userPhone').value;
             let userEmail = document.getElementById('userEmail').value;
             let userLocation = document.getElementById('userLocation').value;
             let userCourse = document.getElementById('userCourse').value;
-
-            let adminPhoneNumber = "917704800153"; // Institute WhatsApp Number
-
+            let adminPhoneNumber = "917704800153"; 
             let message = `*New Student Enrollment Request*%0A%0A` +
                           `👤 *Name:* ${firstName} ${lastName}%0A` +
                           `📱 *WhatsApp:* ${userPhone}%0A` +
                           `📧 *Email:* ${userEmail}%0A` +
                           `📍 *Location:* ${userLocation}%0A` +
                           `🎓 *Course:* ${userCourse}`;
-
             let whatsappURL = `https://wa.me/${adminPhoneNumber}?text=${message}`;
             window.open(whatsappURL, '_blank');
         }
