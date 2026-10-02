@@ -30,54 +30,35 @@
         body {
             background-color: var(--bg-dark);
             color: var(--text-light);
-            line-height: 1.5;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            line-height: 1.6;
             width: 100%;
             overflow-x: hidden;
         }
 
-        /* Main Container - Default Desktop & Responsive Setup */
+        /* Full Screen Website Layout (Jaise badi websites hoti hain) */
         .container {
             width: 100%;
-            max-width: 650px;
+            max-width: 1200px; /* Computer screen ke liye wide layout */
             margin: 0 auto;
-            border: 4px solid #22c55e;
-            border-radius: 20px;
-            padding: 25px;
-            background: rgba(17, 24, 39, 0.6);
-            animation: greenBorderGlow 4s infinite ease-in-out;
+            padding: 20px;
+            background: var(--bg-dark);
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            gap: 25px;
         }
 
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
+        @media (max-width: 768px) {
             .container {
-                max-width: 100%;
-                padding: 15px;
-                border-width: 3px;
+                padding: 10px;
                 gap: 15px;
             }
-        }
-
-        @keyframes greenBorderGlow {
-            0%, 100% { border-color: #22c55e; box-shadow: 0 0 15px rgba(34, 197, 94, 0.4); }
-            50% { border-color: #00ffcc; box-shadow: 0 0 30px rgba(0, 255, 204, 0.8); }
         }
 
         /* General Box Styling */
         .box-common {
             width: 100%;
             border-radius: 12px;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -101,7 +82,7 @@
             width: 100%;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 210, 255, 0.3);
+            box-shadow: 0 5px 20px rgba(0, 210, 255, 0.3);
         }
         .banner-container img {
             width: 100%;
@@ -111,69 +92,67 @@
 
         /* Header / Founders Section */
         .header-section {
-            padding: 25px 15px;
+            padding: 30px 15px;
+            border: 3px solid #22c55e;
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
         }
         .astro-tag {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: var(--bright-blue);
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
         .brand-title {
             font-family: 'Cinzel', serif;
-            font-size: 2.2rem;
+            font-size: 2.8rem;
             background: linear-gradient(135deg, #FFF5C0 0%, #FFD700 50%, #FFA500 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
             line-height: 1.1;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
-        @media (max-width: 480px) {
-            .brand-title { font-size: 1.7rem; }
-            .astro-tag { font-size: 0.7rem; }
+        @media (max-width: 768px) {
+            .brand-title { font-size: 2rem; }
+            .astro-tag { font-size: 0.75rem; }
         }
         .sub-tagline {
-            font-size: 1rem;
+            font-size: 1.2rem;
             color: var(--primary-yellow);
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .founder-badge {
             border: 1.5px solid #ff3333;
             border-radius: 8px;
-            padding: 10px;
+            padding: 10px 20px;
             margin-bottom: 8px;
             background: linear-gradient(135deg, rgba(255, 51, 51, 0.1), transparent);
-            font-size: 0.95rem;
+            font-size: 1rem;
             display: flex;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             width: 100%;
-            max-width: 350px;
+            max-width: 400px;
         }
 
         /* Social Media Box with Professional Animation & Hand Icon */
         .social-main-box {
             border: 3.5px solid #22c55e;
             border-radius: 16px;
-            padding: 20px;
+            padding: 25px;
             background: rgba(17, 24, 39, 0.95);
-            animation: glowPulse 3s infinite ease-in-out;
-        }
-        @keyframes glowPulse {
-            0%, 100% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.4); }
-            50% { box-shadow: 0 0 25px rgba(34, 197, 94, 0.9); }
+            box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
         }
         .social-heading {
             color: #22c55e;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
         @media (max-width: 480px) {
-            .social-heading { font-size: 1rem; }
+            .social-heading { font-size: 1.05rem; }
         }
         .social-btn {
             display: flex;
@@ -181,14 +160,16 @@
             justify-content: center;
             gap: 12px;
             color: white;
-            padding: 12px;
-            border-radius: 25px;
+            padding: 14px 20px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
-            margin: 8px 0;
+            margin: 10px 0;
             width: 100%;
-            font-size: 1rem;
+            max-width: 500px;
+            font-size: 1.1rem;
             transition: transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         .social-btn:hover { transform: scale(1.02); }
         .social-btn.youtube { background: #ff0000; }
@@ -200,71 +181,72 @@
         /* Animated Pointing Finger / Hand Icon */
         .pointing-finger {
             animation: fingerBounce 1s infinite ease-in-out;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         @keyframes fingerBounce {
             0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(6px); }
+            50% { transform: translateX(8px); }
         }
 
         /* Stats & Offer */
         .stats-card {
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-            font-size: 1rem;
-            padding: 20px;
+            font-size: 1.1rem;
+            padding: 25px;
         }
-        .stats-tag { color: var(--primary-yellow); font-size: 1.1rem; }
+        .stats-tag { color: var(--primary-yellow); font-size: 1.2rem; }
         .offer-box {
             background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
             border: 2px solid var(--primary-yellow);
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(220, 38, 38, 0.4);
         }
         .offer-badge {
             background-color: var(--primary-yellow);
             color: #000000;
-            font-size: 1.3rem;
-            padding: 8px 15px;
+            font-size: 1.4rem;
+            padding: 10px 20px;
             border-radius: 8px;
-            margin: 10px 0;
+            margin: 12px 0;
             font-weight: 800;
         }
 
         /* Form */
-        .form-card { padding: 20px; gap: 12px; }
-        .form-group { width: 100%; text-align: left; }
-        .form-group label { font-size: 0.9rem; margin-bottom: 5px; display: block; color: var(--primary-yellow); }
+        .form-card { padding: 30px; gap: 15px; }
+        .form-group { width: 100%; max-width: 600px; text-align: left; }
+        .form-group label { font-size: 1rem; margin-bottom: 6px; display: block; color: var(--primary-yellow); }
         .form-control {
             width: 100%;
-            padding: 12px;
+            padding: 14px;
             border-radius: 8px;
             border: 1px solid #334155;
             background-color: var(--input-bg);
             color: #ffffff;
             font-size: 1rem;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         .btn-submit {
             display: block;
             width: 100%;
+            max-width: 600px;
             background: linear-gradient(180deg, #ffe033 0%, #ffcc00 100%);
             color: #cc0000;
-            padding: 14px;
-            font-size: 1.2rem;
+            padding: 15px;
+            font-size: 1.25rem;
             border-radius: 10px;
             border: none;
             font-weight: 800;
             cursor: pointer;
-            margin-top: 5px;
+            margin-top: 10px;
         }
-        /* Call Button Spacing */
         .btn-call {
             display: block;
             width: 100%;
+            max-width: 600px;
             background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
             color: #ffffff;
-            padding: 14px;
-            font-size: 1.1rem;
+            padding: 15px;
+            font-size: 1.2rem;
             border-radius: 10px;
             margin-top: 15px;
             text-align: center;
@@ -272,51 +254,34 @@
             font-weight: 700;
         }
 
-        /* Classroom Image with Animated Pink Border & Zoom */
-        @keyframes pinkBorderGlow {
-            0%, 100% { border-color: #ff3399; box-shadow: 0 0 10px rgba(255, 51, 153, 0.5); }
-            50% { border-color: #ff66cc; box-shadow: 0 0 20px rgba(255, 102, 204, 0.9); }
-        }
-        @keyframes imageSmoothZoom {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); }
-        }
+        /* Classroom Image */
         .classroom-container {
             width: 100%;
+            max-width: 700px;
             border-radius: 12px;
             overflow: hidden;
             border: 3.5px solid #ff3399;
             box-shadow: 0 10px 30px rgba(255, 51, 153, 0.4);
-            animation: pinkBorderGlow 3s infinite ease-in-out;
-            margin: 20px 0 10px 0;
+            margin: 20px 0;
         }
         .classroom-container img {
             width: 100%;
             height: auto;
             display: block;
-            animation: imageSmoothZoom 6s infinite ease-in-out;
         }
 
         /* Contact Boxes */
-        .contact-box { padding: 20px; gap: 8px; margin-top: 15px; }
-        .contact-box a { word-break: break-all; font-size: 1rem; }
-        .extra-email-box {
-             padding: 12px;
-             font-size: 0.9rem;
-             border-radius: 8px;
-        }
-        .extra-email-box a {
-            font-size: 0.9rem;
-            color: #ffffff;
-            text-decoration: none;
-        }
+        .contact-box { padding: 20px; gap: 8px; margin-top: 15px; width: 100%; max-width: 600px; }
+        .contact-box a { word-break: break-all; font-size: 1.1rem; }
+        .extra-email-box { padding: 15px; font-size: 1rem; border-radius: 8px; }
+        .extra-email-box a { font-size: 1rem; color: #ffffff; text-decoration: none; }
 
         .footer-tagline {
             color: var(--bright-blue);
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 20px;
+            letter-spacing: 1.5px;
+            margin-top: 25px;
             text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
         }
 
@@ -324,13 +289,15 @@
         .gallery-section {
             display: flex;
             flex-direction: column;
-            gap: 15px;
-            margin-top: 15px;
+            gap: 20px;
+            margin-top: 20px;
             width: 100%;
+            align-items: center;
         }
         .gallery-card {
             width: 100%;
-            border-radius: 10px;
+            max-width: 700px;
+            border-radius: 12px;
             overflow: hidden;
             border: 2px solid rgba(0, 210, 255, 0.4);
         }
@@ -340,19 +307,19 @@
             display: block;
         }
         .gallery-caption {
-            background: rgba(17, 24, 39, 0.9);
+            background: rgba(17, 24, 39, 0.95);
             color: var(--primary-yellow);
             text-align: center;
-            padding: 8px;
-            font-size: 0.8rem;
+            padding: 12px;
+            font-size: 0.95rem;
         }
     </style>
 </head>
 <body>
-        <div class="container">
+    <div class="container">
         <!-- 1. Top Banner -->
         <div class="banner-container">
-            <img src="banner.jpg" alt="Live Interactive Classes Banner" onerror="this.src='https://via.placeholder.com/650x270/111827/ffd700?text=Skill+Guru+Institute';">
+            <img src="banner.jpg" alt="Live Interactive Classes Banner" onerror="this.src='https://via.placeholder.com/1200x500/111827/ffd700?text=Skill+Guru+Institute';">
         </div>
 
         <!-- 2. Header / Founders -->
@@ -374,7 +341,7 @@
         </div>
 
         <!-- 3. Social Media Box with Real Logos & Animated Pointing Finger -->
-        <div class="social-main-box">
+        <div class="box-common social-main-box">
             <div class="social-heading">✨ Join Social Media Channels Now ✨</div>
             <a href="https://www.youtube.com/@skillguru-d1d" target="_blank" class="social-btn youtube">
                 <span class="pointing-finger">👉</span> <i class="fab fa-youtube"></i> YouTube
@@ -396,21 +363,21 @@
         <!-- 4. Stats -->
         <div class="box-common stats-card">
             <p class="stats-tag">🎓 Empowering Global Talent 🔮</p>
-            <h3 style="color: #ffffff; font-weight: 600; margin-top: 8px;">
+            <h3 style="color: #ffffff; font-weight: 600; margin-top: 10px;">
                 Successfully Empowered <span style="color: #ff3333; font-weight: 800; text-decoration: underline;">2,000+ Professional Astrologers</span> with Expert Training & Guidance 📜✨
             </h3>
         </div>
 
         <!-- 5. Offer -->
         <div class="box-common offer-box">
-            <h3 style="color: #ffffff; font-weight: 700;">🌟 SPECIAL LIMITED TIME OFFER 🌟</h3>
+            <h3 style="color: #ffffff; font-weight: 700; font-size: 1.3rem;">🌟 SPECIAL LIMITED TIME OFFER 🌟</h3>
             <div class="offer-badge">FLAT 50% OFF ON ALL FEES</div>
-            <p style="color: #fef08a; font-weight: 600; font-size: 0.95rem;">Apply now for professional Astrology & Occult courses at half price!</p>
+            <p style="color: #fef08a; font-weight: 600; font-size: 1.05rem;">Apply now for professional Astrology & Occult courses at half price!</p>
         </div>
 
-        <!-- 6. Form & New Classroom Image -->
+        <!-- 6. Form & Classroom Image -->
         <div class="box-common form-card">
-            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)" style="width: 100%;">
+            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
                 <div class="form-group">
                     <label><i class="fas fa-user"></i> First Name</label>
                     <input type="text" id="firstName" class="form-control" placeholder="First Name" required>
@@ -445,18 +412,17 @@
                         <option value="Akashic Records">📜 Akashic Records</option>
                     </select>
                 </div>
-                <!-- Submit and Call Buttons -->
                 <button type="submit" class="btn-submit">SUBMIT 👆</button>
                 <a href="tel:7704800153" class="btn-call">➡️ 📱 CALL US</a>
             </form>
 
-            <!-- Classroom Image with Animated Pink Border & Zoom -->
+            <!-- Classroom Image -->
             <div class="classroom-container">
-                <img src="classroom.jpg" alt="Join The Best Class Now" onerror="this.src='https://via.placeholder.com/650x365/111827/ffd700?text=Join+The+Best+Class+Now';">
+                <img src="classroom.jpg" alt="Join The Best Class Now" onerror="this.src='https://via.placeholder.com/700x390/111827/ffd700?text=Join+The+Best+Class+Now';">
             </div>
 
-            <div class="box-common contact-box">
-                <div style="color: var(--primary-yellow); font-size: 0.9rem;">
+            <div class="box-common contact-box" style="border: none; background: rgba(0,0,0,0.2);">
+                <div style="color: var(--primary-yellow); font-size: 1rem;">
                     🔮 Master Horoscope, Palmistry & Vastu Shastra 🌌
                 </div>
                 <a href="tel:7704800153" style="color: #ff6b6b; text-decoration: none; font-weight: 800; margin-top: 8px;">
@@ -464,9 +430,9 @@
                 </a>
             </div>
 
-            <!-- Fixed Email Box -->
-            <div class="box-common extra-email-box contact-box">
-                <i class="fas fa-envelope" style="color: #ea4335; margin-bottom: 4px;"></i>
+            <!-- Email Box -->
+            <div class="box-common extra-email-box contact-box" style="border: 1px solid var(--bright-blue);">
+                <i class="fas fa-envelope" style="color: #ea4335; margin-bottom: 4px; font-size: 1.2rem;"></i>
                 <a href="mailto:skillgurueducation112@gmail.com">skillgurueducation112@gmail.com</a>
             </div>
 
@@ -478,11 +444,11 @@
         <!-- 7. Gallery -->
         <div class="gallery-section">
             <div class="gallery-card">
-                <img src="gallery1.jpg" alt="Vedic Astrology Chart" onerror="this.src='https://via.placeholder.com/650x300/1f293d/ffffff?text=Vedic+Astrology';">
+                <img src="gallery1.jpg" alt="Vedic Astrology Chart" onerror="this.src='https://via.placeholder.com/700x350/1f293d/ffffff?text=Vedic+Astrology';">
                 <div class="gallery-caption">✨ Live Interactive Astrology & Kundli Sessions 📜</div>
             </div>
             <div class="gallery-card">
-                <img src="gallery2.jpg" alt="Horoscope Reading" onerror="this.src='https://via.placeholder.com/650x300/1f293d/ffd700?text=Horoscope+Reading';">
+                <img src="gallery2.jpg" alt="Horoscope Reading" onerror="this.src='https://via.placeholder.com/700x350/1f293d/ffd700?text=Horoscope+Reading';">
                 <div class="gallery-caption">🔮 Master Horoscope, Palmistry & Vastu Shastra 🌌</div>
             </div>
         </div>
@@ -511,3 +477,4 @@
     </script>
 </body>
 </html>
+
