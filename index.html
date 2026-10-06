@@ -223,37 +223,70 @@
             max-width: 480px;
         }
 
-        /* Helpline Box */
+        /* DIGIT-WISE ANIMATED HELPLINE BOX (TOP - AS REQUESTED IN IMAGE) */
         .helpline-highlight-box {
             background: linear-gradient(135deg, #065f46 0%, #047857 100%);
             border: 3px solid #34d399;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 10px 0;
-            box-shadow: 0 0 25px rgba(52, 211, 153, 0.4);
+            border-radius: 14px;
+            padding: 22px 15px;
+            margin: 12px 0;
+            box-shadow: 0 0 30px rgba(52, 211, 153, 0.4);
             width: 100%;
-            max-width: 700px;
+            max-width: 750px;
         }
         .helpline-highlight-box h3 {
             color: #fef08a;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             text-transform: uppercase;
             margin-bottom: 8px;
         }
-        .helpline-number-display {
-            font-size: 2.1rem;
-            color: #ffffff;
-            font-weight: 900;
-            letter-spacing: 2px;
+
+        .digit-animated-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 10px;
             text-decoration: none;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 8px 20px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-top: 5px;
-            border: 1.5px dashed #ffd700;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 12px 18px;
+            border-radius: 12px;
+            border: 2px dashed #ffd700;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
         }
-        @media (max-width: 480px) { .helpline-number-display { font-size: 1.6rem; } }
+        .digit-animated-container:hover {
+            transform: scale(1.02);
+        }
+
+        .digit-box {
+            background: linear-gradient(135deg, #111827 0%, #1f293d 100%);
+            color: #ffd700;
+            font-size: 1.8rem;
+            font-weight: 900;
+            width: 40px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 2px solid #34d399;
+            box-shadow: 0 0 12px rgba(52, 211, 153, 0.5);
+            animation: digitBouncePulse 2s infinite ease-in-out;
+        }
+
+        .digit-box:nth-child(odd) { animation-delay: 0.2s; color: #ffffff; border-color: #ffd700; }
+        .digit-box:nth-child(even) { animation-delay: 0.5s; }
+
+        @keyframes digitBouncePulse {
+            0%, 100% { transform: translateY(0) scale(1); box-shadow: 0 0 8px rgba(52,211,153,0.4); }
+            50% { transform: translateY(-4px) scale(1.08); box-shadow: 0 0 20px rgba(52,211,153,0.9); }
+        }
+
+        @media (max-width: 480px) {
+            .digit-box { width: 32px; height: 42px; font-size: 1.4rem; }
+        }
 
         /* PROFESSIONAL ANIMATED WHATSAPP HELPLINE BOX */
         .animated-whatsapp-helpline-box {
@@ -317,7 +350,7 @@
             50% { transform: scale(1.15); }
         }
 
-        /* PROFESSIONAL ANIMATED CALL HELPLINE BOX (Added near bottom form section) */
+        /* PROFESSIONAL ANIMATED CALL HELPLINE BOX (BOTTOM SECTION) */
         .animated-call-helpline-box {
             background: linear-gradient(135deg, #0c2233 0%, #082f49 100%);
             border: 2.5px solid #0ea5e9;
@@ -557,7 +590,7 @@
             <img src="banner.jpg" alt="Skill Guru Institute Banner" onerror="this.src='https://via.placeholder.com/1200x500/111827/ffd700?text=Skill+Guru+Institute+Best+Astrology+Training';">
         </div>
 
-        <!-- 2. Header / Branding & Official Helpline -->
+        <!-- 2. Header / Branding & Official Helpline (Updated with Digit-Wise Animated Boxes) -->
         <div class="box-common header-section">
             <div class="astro-tag">
                 <span>🔮</span> Premium Astrology & Occult Academy <span>✨</span>
@@ -565,11 +598,24 @@
             <h1 class="brand-title">SKILL GURU INSTITUTE</h1>
             <p class="sub-tagline">⭐ India's Best Astrology Training & Business Hub ⭐</p>
             
-            <!-- Official Helpline Box -->
+            <!-- Official Helpline Box with Digit-Wise Animated Boxes -->
             <div class="helpline-highlight-box">
                 <h3><i class="fas fa-headset"></i> Official Helpline & Support Number</h3>
                 <p style="color: #ffffff; font-size: 0.95rem; margin-bottom: 5px;">For Skill Guru Institute Admissions, Course Inquiries, and Astrotalk Support:</p>
-                <a href="tel:7704800153" class="helpline-number-display"><i class="fas fa-phone-alt"></i> 7704800153</a>
+                
+                <a href="tel:7704800153" class="digit-animated-container" title="Click to Call Helpline">
+                    <i class="fas fa-phone-alt call-icon-pulse" style="margin-right: 8px; font-size: 1.4rem; color: #38bdf8;"></i>
+                    <div class="digit-box">7</div>
+                    <div class="digit-box">7</div>
+                    <div class="digit-box">0</div>
+                    <div class="digit-box">4</div>
+                    <div class="digit-box">8</div>
+                    <div class="digit-box">0</div>
+                    <div class="digit-box">0</div>
+                    <div class="digit-box">1</div>
+                    <div class="digit-box">5</div>
+                    <div class="digit-box">3</div>
+                </a>
             </div>
 
             <!-- ANIMATED PROFESSIONAL WHATSAPP HELPLINE BOX -->
@@ -706,7 +752,7 @@
                     🔮 Master Horoscope, Astrotalk Joining & Vastu Shastra 🌌
                 </div>
                 
-                <!-- PROFESSIONAL ANIMATED CALL HELPLINE BOX (Replaced plain helpline text with glowing animated call box as requested) -->
+                <!-- PROFESSIONAL ANIMATED CALL HELPLINE BOX -->
                 <div class="animated-call-helpline-box">
                     <div class="animated-call-title">📞 Official Helpline Number</div>
                     <a href="tel:7704800153" class="animated-call-link">
@@ -763,4 +809,3 @@
     </script>
 </body>
 </html>
-
