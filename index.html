@@ -118,6 +118,7 @@
             --primary-yellow: #ffd700;
             --accent-red: #ff3333;
             --bright-blue: #00d2ff;
+            --whatsapp-green: #25d366;
             --bg-dark: #0a0e1a;
             --card-bg: #111827;
             --input-bg: #1f293d;
@@ -252,6 +253,68 @@
             border: 1.5px dashed #ffd700;
         }
         @media (max-width: 480px) { .helpline-number-display { font-size: 1.6rem; } }
+
+        /* PROFESSIONAL ANIMATED WHATSAPP HELPLINE BOX (Added right below Official Helpline) */
+        .animated-whatsapp-helpline-box {
+            background: linear-gradient(135deg, #0b2217 0%, #112c1f 100%);
+            border: 2.5px solid #25d366;
+            border-radius: 14px;
+            padding: 20px;
+            margin: 15px 0;
+            width: 100%;
+            max-width: 700px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.4);
+            animation: whatsappGlowPulse 2s infinite ease-in-out;
+        }
+        
+        .animated-whatsapp-title {
+            color: #ffd700;
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .animated-whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 900;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.45);
+            border: 2px dashed #25d366;
+            color: #ffffff;
+            transition: transform 0.3s ease, background 0.3s ease;
+            flex-wrap: wrap;
+        }
+        
+        .animated-whatsapp-link:hover {
+            transform: scale(1.03);
+            background: rgba(37, 211, 102, 0.15);
+        }
+
+        .whatsapp-icon-pulse {
+            color: #25d366;
+            font-size: 1.8rem;
+            animation: iconBlink 1.5s infinite ease-in-out;
+        }
+
+        @keyframes whatsappGlowPulse {
+            0% { box-shadow: 0 0 15px rgba(37, 211, 102, 0.3); border-color: #16a34a; }
+            50% { box-shadow: 0 0 35px rgba(37, 211, 102, 0.8); border-color: #25d366; }
+            100% { box-shadow: 0 0 15px rgba(37, 211, 102, 0.3); border-color: #16a34a; }
+        }
+
+        @keyframes iconBlink {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
 
         /* Social Media Box */
         .social-main-box {
@@ -457,7 +520,17 @@
                 <a href="tel:7704800153" class="helpline-number-display"><i class="fas fa-phone-alt"></i> 7704800153</a>
             </div>
 
-            <div class="founder-badge">
+            <!-- ANIMATED PROFESSIONAL WHATSAPP HELPLINE BOX (Added right below Official Helpline as requested) -->
+            <div class="animated-whatsapp-helpline-box">
+                <div class="animated-whatsapp-title">✨ Chat With Us On WhatsApp For Instant Support ✨</div>
+                <a href="https://wa.me/917704800153?text=Hello%20Skill%20Guru%20Institute,%20I%20need%20help%20with%20admission." target="_blank" class="animated-whatsapp-link">
+                    <i class="fab fa-whatsapp whatsapp-icon-pulse"></i>
+                    <span style="color: #ffd700; font-size: 1.4rem;">7704800153</span>
+                    <span style="font-size: 0.9rem; background: #25d366; color: #000; padding: 4px 10px; border-radius: 6px; font-weight: 800;">WhatsApp Message Now</span>
+                </a>
+            </div>
+
+            <div class="founder-badge" style="margin-top: 15px;">
                 <span style="color: #ff4d4d; font-weight: 800;">👑 Founder (50% Owner):</span>
                 <span style="color: #ffffff;">Harsh Pandey (5+ Years Experience)</span>
             </div>
@@ -503,16 +576,6 @@
 
             <div class="seo-faq-item">
                 <h3>Q: What is the official helpline number of Skill Guru Institute?</h3>
-                <p>The official helpline, customer support, and direct contact number for Skill Guru Institute is <strong>7704800153</strong>. Users can reach out anytime for course inquiries, admission assistance, and astrological support.</p>
-            </div>
-
-            <div class="seo-faq-item">
-                <h3>Q: Who are the owners, founders, and creators of Skill Guru Institute?</h3>
-                <p>Skill Guru Institute is successfully founded and co-owned equally (50-50 partnership) by Harsh Pandey (Founder) and Rohit Pandey (Co-Founder), both having over 5 years of verified professional expertise in the occult and astrology industry.</p>
-            </div>
-
-            <div class="seo-faq-item">
-                <h3>Q: What is the main office location and address of Skill Guru Institute?</h3>
                 <p>The official headquarters and office location of Skill Guru Institute is situated in Sultanpur, Uttar Pradesh, with postal pin code <strong>228001</strong>.</p>
             </div>
 
@@ -642,3 +705,6 @@
     </script>
 </body>
 </html>
+
+    
+    
